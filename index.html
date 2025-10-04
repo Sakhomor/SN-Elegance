@@ -83,6 +83,11 @@
 </style>
 </head>
 <body>
+  <!-- Bandeau de consentement cookies -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#333;color:#fff;padding:15px;text-align:center;z-index:1000;font-size:14px;">
+  Ce site utilise des cookies pour améliorer votre expérience et afficher des annonces.
+  <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;background:#4CAF50;color:white;border:none;cursor:pointer;border-radius:6px;">Accepter</button>
+</div>
 
 <header>
   <div class="header-inner">
@@ -630,5 +635,41 @@ el('#cartButton').addEventListener('click', toggleCart);
 el('#searchInput').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') applySearch(); });
 document.addEventListener('DOMContentLoaded', ()=>{ renderProducts(PRODUCTS); renderRecommendations(); renderCart(); });
 </script>
+   <script>
+  // Vérifie si l'utilisateur a déjà accepté
+  if(localStorage.getItem('cookiesAccepted') === 'true') {
+    loadAnalyticsAdsense();
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  // Bouton accepter
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    loadAnalyticsAdsense();
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+
+  // Fonction pour charger Analytics + AdSense
+  function loadAnalyticsAdsense() {
+    // Google Analytics
+    var gaScript = document.createElement('script');
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0N9JG7ZTKE";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-0N9JG7ZTKE');
+
+    // Google AdSense
+    var adScript = document.createElement('script');
+    adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    adScript.setAttribute('data-ad-client', 'ca-pub-XXXXXXXXXXXX'); // <-- Remplace par ton ID AdSense
+    adScript.async = true;
+    document.head.appendChild(adScript);
+  }
+</script> 
 </body>
 </html>
