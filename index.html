@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SN-Élégance 221 — Boutique</title>
+<meta name="description" content="SN-Élégance 221 — Tissus Getzner premium. Achetez au mètre : Magnum, Brocade, Wifi, Focus. Paiement Wave & Orange Money. Commande via WhatsApp."/>
+<style>
+  :root{
+    --ivory:#F8F6F1;
+    --champagne:#C9A227;
+    --sand:#E5D9C5;
+    --dark:#2C2C2C;
+    --accent:#006C67;
+    --muted:#6f6b64;
+    --card:#ffffff;
+    --radius:12px;
+    --shadow: 0 10px 30px rgba(15,15,15,0.08);
+    font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--ivory) 0%, #f3efe8 100%);color:var(--dark);-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  header{position:sticky;top:0;z-index:90;background:rgba(248,246,241,0.98);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid rgba(44,44,44,0.04)}
+  .header-inner{max-width:1200px;margin:0 auto;padding:12px 18px;display:flex;gap:12px;align-items:center}
+  .logo{height:64px;width:auto}
+  .brand{margin-left:6px}
+  .site-title{font-size:18px;font-weight:800;color:var(--dark)}
+  .site-sub{font-size:12px;color:var(--muted)}
+  .search-wrap{flex:1;display:flex;align-items:center;gap:8px;margin-left:12px}
+  .search-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(44,44,44,0.06);font-size:15px}
+  .search-btn{padding:10px 12px;border-radius:10px;border:none;background:var(--champagne);font-weight:800;cursor:pointer}
+  .top-actions{display:flex;gap:8px;align-items:center;margin-left:auto}
+  .category-menu{display:flex;gap:8px;align-items:center;padding:10px 18px;overflow:auto}
+  .category-chip{background:transparent;border:1px solid rgba(44,44,44,0.06);padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:700}
+  main{max-width:1200px;margin:18px auto;padding:0 16px 80px}
+  .hero{display:flex;gap:18px;align-items:center;margin:10px 0 20px}
+  .hero-left{flex:1}
+  .hero h1{margin:0;font-size:26px;color:var(--dark)}
+  .hero p{color:var(--muted);margin:8px 0}
+  .promo-bar{background:linear-gradient(90deg, rgba(201,162,39,0.09), rgba(0,108,103,0.02));padding:10px;border-radius:10px;border:1px solid rgba(44,44,44,0.03);display:inline-block}
+  .filters{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+  .select, .minmax{padding:8px;border-radius:8px;border:1px solid rgba(44,44,44,0.06);background:transparent}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(44,44,44,0.04);box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:460px}
+  .thumbs{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+  .thumbs img{width:86px;height:86px;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:transform .12s, box-shadow .12s}
+  .thumbs img.active{border-color:var(--champagne)}
+  .main-photo{width:100%;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(44,44,44,0.04);cursor:zoom-in}
+  .title{font-weight:800;color:var(--dark);text-align:center;margin:8px 0 6px}
+  .desc{color:var(--muted);font-size:14px;text-align:center;margin-bottom:8px}
+  .price{font-weight:900;color:var(--champagne);font-size:18px;text-align:center;margin-bottom:10px}
+  .card .controls{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:auto}
+  input[type="number"]{width:90px;padding:8px;border-radius:8px;border:1px solid rgba(44,44,44,0.06);text-align:center}
+  .add-btn{background:var(--champagne);color:#111;padding:10px 14px;border-radius:10px;border:none;font-weight:800;cursor:pointer}
+  .secondary-btn{background:transparent;border:1px solid rgba(44,44,44,0.06);padding:8px 10px;border-radius:8px;cursor:pointer}
+  .stars{color:#f2b01e}
+  .cart-floating{position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background:var(--champagne);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 14px 40px rgba(0,0,0,0.2);z-index:140}
+  .cart-floating .count{position:absolute;top:-6px;right:-6px;background:#042b16;color:#fff;border-radius:50%;padding:4px 7px;font-size:12px;font-weight:800}
+  .cart-panel{position:fixed;right:18px;bottom:92px;width:420px;max-height:78vh;background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(44,44,44,0.06);box-shadow:0 30px 90px rgba(0,0,0,0.12);overflow:auto;z-index:130;display:none}
+  .cart-panel.open{display:block}
+  .cart-item{display:flex;gap:8px;align-items:center;padding:8px;border-radius:8px;border:1px solid rgba(44,44,44,0.03);margin-bottom:8px}
+  .cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+  .cart-mini-meta{flex:1}
+  .cart-total{display:flex;justify-content:space-between;align-items:center;font-weight:900;margin-top:8px;color:var(--champagne)}
+  .cart-actions{margin-top:10px;display:flex;gap:6px;flex-direction:column}
+  .pay-row{display:flex;gap:8px}
+  .pay-wave{flex:1;background:#0dbc5f;color:#042b16;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+  .pay-orange{flex:1;background:#ff7a00;color:#fff;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+  .whatsapp-btn{background:#25D366;color:#042b16;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
+  .modal-back{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:200}
+  .modal{background:var(--card);border-radius:12px;padding:16px;max-width:920px;width:94%;display:flex;gap:14px;box-shadow:0 30px 90px rgba(0,0,0,0.12)}
+  .modal .left{flex:1}
+  .modal .right{width:320px}
+  .modal img{width:100%;border-radius:8px}
+  .modal h3{margin:0;color:var(--champagne)}
+  .modal label{display:block;margin-top:8px;color:var(--muted);font-size:13px}
+  .small{font-size:13px;color:var(--muted)}
+  .faq{margin-top:26px;background:var(--sand);padding:16px;border-radius:12px;border:1px solid rgba(44,44,44,0.04)}
+  footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted)}
+  @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.cart-panel{right:12px;width:340px}}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}.header-inner{flex-direction:column;align-items:flex-start}.search-wrap{width:100%}.cart-panel{position:fixed;left:12px;right:12px;bottom:80px;width:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <img class="logo" src="https://i.postimg.cc/fWJvXsJ4/SN-Elegange.png" alt="SN-Élégance logo">
+    <div class="brand">
+      <div class="site-title">SN-Élégance 221</div>
+      <div class="site-sub">Des tissus de prestige pour donner vie à votre élégance unique.</div>
+    </div>
+
+    <div class="search-wrap">
+      <input id="searchInput" class="search-input" type="search" placeholder="Rechercher un tissu (ex: Magnum, Brocade) ...">
+      <button class="search-btn" onclick="applySearch()">Rechercher</button>
+      <select id="sortSelect" class="select" onchange="applyFilters()">
+        <option value="reco">Trier par : Recommandés</option>
+        <option value="price-asc">Prix : bas → haut</option>
+        <option value="price-desc">Prix : haut → bas</option>
+        <option value="name-asc">Nom A→Z</option>
+      </select>
+    </div>
+
+    <div class="top-actions">
+      <div style="text-align:right;font-size:13px;color:var(--muted)">
+        📞 +221 75 443 7491<br>📞 +221 78 432 4745
+      </div>
+    </div>
+  </div>
+
+  <div class="category-menu" id="categoryMenu">
+    <div class="category-chip" data-cat="all" onclick="filterByCategory('all')">Tous</div>
+    <div class="category-chip" data-cat="magnum" onclick="filterByCategory('magnum')">Magnum</div>
+    <div class="category-chip" data-cat="brocade" onclick="filterByCategory('brocade')">Brocade</div>
+    <div class="category-chip" data-cat="wifi" onclick="filterByCategory('wifi')">Wifi</div>
+    <div class="category-chip" data-cat="focus" onclick="filterByCategory('focus')">Focus</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Collections Getzner — Qualité & élégance</h1>
+      <p>Choisissez votre tissu, sélectionnez la quantité en mètres et confirmez en quelques clics. Paiement Wave & Orange Money disponibles.</p>
+      <div style="margin-top:10px">
+        <span class="promo-bar">Promo : -10% à partir de 5 mètres sur chaque produit</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="productsGrid" class="grid"></div>
+
+  <section style="margin-top:20px">
+    <h3 style="color:var(--dark)">Recommandés pour vous</h3>
+    <div id="recommendGrid" style="display:flex;gap:12px;margin-top:12px;overflow:auto"></div>
+  </section>
+
+  <section class="faq">
+    <h3>FAQ — Livraison & Paiement</h3>
+    <p><strong>Livraison locale :</strong> Nous livrons à Dakar et environs via moto/transporteur. Le tarif dépend de la distance.</p>
+    <p><strong>Livraison internationale :</strong> Sur demande — contactez-nous par WhatsApp pour un devis.</p>
+    <p><strong>Paiement :</strong> Wave (Promobile) et Orange Money acceptés. Vous pouvez payer via QR ou manuellement, puis confirmer via WhatsApp.</p>
+    <p><strong>Annulation / Réclamation :</strong> Contactez-nous immédiatement sur WhatsApp avec la référence et le reçu.</p>
+  </section>
+</main>
+
+<div class="cart-floating" id="cartButton" title="Voir le panier" onclick="toggleCart()">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <path d="M3 3h2l.344 2M7 13h10l3-8H6.5" stroke="#042b16" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.6" fill="#042b16"/><circle cx="18" cy="20" r="1.6" fill="#042b16"/>
+  </svg>
+  <div class="count" id="cartCount">0</div>
+</div>
+
+<div class="cart-panel" id="cartPanel" aria-live="polite">
+  <h4>🛒 Votre panier</h4>
+  <div id="cartList" class="cart-list">Le panier est vide</div>
+  <div class="cart-total">
+    <div>Total</div>
+    <div id="cartTotal">0 CFA</div>
+  </div>
+  <div class="cart-actions">
+    <button class="whatsapp-btn" onclick="openWhatsApp()">Commander via WhatsApp</button>
+    <div class="pay-row">
+      <button class="pay-wave" onclick="openPayModal('wave')">Payer Wave</button>
+      <button class="pay-orange" onclick="openPayModal('orange')">Payer Orange</button>
+    </div>
+    <div class="small" style="margin-top:6px">Après paiement, cliquez sur "J'ai payé" dans la popup et confirmez via WhatsApp.</div>
+  </div>
+</div>
+
+<div id="modals"></div>
+
+<footer>
+  <div>© 2025 SN-Élégance 221</div>
+  <div class="small">Téléphone : +221 75 443 7491 • +221 78 432 4745</div>
+</footer>
+
+<script>
+/* =========================
+   PRODUITS — avec tes nouveaux liens (5 par produit)
+   ========================= */
+const PRODUCTS = [
+  {
+    id: 'magnum',
+    name: 'Getzner Magnum Gold',
+    price: 11000,
+    desc: 'Le tissu Getzner Magnum Gold est reconnu pour sa qualité exceptionnelle et son éclat raffiné. Idéal pour boubous et tenues de fête.',
+    category: 'magnum',
+    images: [
+      'https://i.postimg.cc/BQxHq1Wb/IMG-20250927-WA0060.jpg',
+      'https://i.postimg.cc/VL15WGTv/IMG-20250927-WA0074.jpg',
+      'https://i.postimg.cc/Wpm1zm3j/IMG-20250927-WA0066-1.jpg',
+      'https://i.postimg.cc/ryg27fsp/IMG-20250927-WA0070.jpg',
+      'https://i.postimg.cc/2yycsF9h/IMG-20250927-WA0064.jpg'
+    ],
+    rating: 4.7,
+    reviews: 24
+  },
+  {
+    id: 'brocade',
+    name: 'Getzner Brocade',
+    price: 13000,
+    desc: 'Le Brocade est un tissu élégant aux motifs tissés, parfait pour des tenues traditionnelles et cérémonies.',
+    category: 'brocade',
+    images: [
+      'https://i.postimg.cc/5yz79NJk/IMG-20250927-WA0084.jpg',
+      'https://i.postimg.cc/L89TwVq2/IMG-20250927-WA0086-1.jpg',
+      'https://i.postimg.cc/R0r0qgcC/IMG-20250927-WA0085.jpg',
+      'https://i.postimg.cc/wvqgsZ36/IMG-20250927-WA0103.jpg',
+      'https://i.postimg.cc/mDDK4sth/IMG-20250927-WA0102-1.jpg'
+    ],
+    rating: 4.9,
+    reviews: 31
+  },
+  {
+    id: 'wifi',
+    name: 'Getzner Wifi',
+    price: 13000,
+    desc: 'Le tissu Wifi séduit par ses motifs originaux et sa souplesse, idéal pour un usage quotidien ou événementiel.',
+    category: 'wifi',
+    images: [
+      'https://i.postimg.cc/15rxDJhX/IMG-20250927-WA0094.jpg',
+      'https://i.postimg.cc/WbnKdzgd/IMG-20250927-WA0096-1.jpg',
+      'https://i.postimg.cc/02Wngw7Z/IMG-20250917-WA0031.jpg',
+      'https://i.postimg.cc/7LgSLGJ7/IMG-20250927-WA0098.jpg',
+      'https://i.postimg.cc/MZrfqb3h/IMG-20250917-WA0028.jpg'
+    ],
+    rating: 4.6,
+    reviews: 18
+  },
+  {
+    id: 'focus',
+    name: 'Getzner Focus',
+    price: 14000,
+    desc: 'Le Focus se distingue par sa texture soyeuse et son tombé fluide, parfait pour des tenues modernes et élégantes.',
+    category: 'focus',
+    images: [
+      'https://i.postimg.cc/v8jTp8c6/IMG-20250927-WA0050.jpg',
+      'https://i.postimg.cc/bw0vDQLG/IMG-20250927-WA0054.jpg',
+      'https://i.postimg.cc/Dfts1PQB/IMG-20250927-WA0041.jpg',
+      'https://i.postimg.cc/Wbw3tG5t/IMG-20250927-WA0044.jpg',
+      'https://i.postimg.cc/tJtXZbNR/IMG-20250927-WA0031.jpg'
+    ],
+    rating: 4.8,
+    reviews: 21
+  }
+];
+
+/* =========================
+   Config & state
+   ========================= */
+const WHATSAPP_NUMBER = "221754437491";
+const WAVE_NUMBER = "+221754437491";
+const ORANGE_NUMBER = "+221784324745";
+let CART = JSON.parse(localStorage.getItem('sn_cart_pro')||'[]');
+function saveCart(){ localStorage.setItem('sn_cart_pro', JSON.stringify(CART)); }
+const money = n => n.toLocaleString() + " CFA";
+const el = sel => document.querySelector(sel);
+const elAll = sel => Array.from(document.querySelectorAll(sel));
+
+/* =========================
+   Render products
+   ========================= */
+function renderProducts(list = PRODUCTS) {
+  const grid = el('#productsGrid');
+  grid.innerHTML = '';
+  list.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'card product';
+    card.dataset.id = p.id;
+    card.dataset.name = p.name;
+    card.dataset.price = p.price;
+    card.dataset.desc = p.desc;
+    card.innerHTML = `
+      <img class="main-photo" src="${p.images[0]}" alt="${p.name}">
+      <div class="thumbs">
+        ${p.images.map((src,i)=>`<img data-src="${src}" ${i===0? 'class="active"':''} src="${src}" alt="${p.name}">`).join('')}
+      </div>
+      <div class="title">${p.name}</div>
+      <div class="desc">${p.desc}</div>
+      <div style="display:flex;justify-content:center;gap:10px;align-items:center">
+        <div class="price">${p.price.toLocaleString()} CFA / m</div>
+        <div style="margin-left:6px;color:var(--muted);font-size:13px">⭐ ${p.rating} (${p.reviews})</div>
+      </div>
+      <div class="controls">
+        <input type="number" min="1" value="1" class="quick-qty">
+        <button class="add-btn" onclick="addFromCard(this)">Ajouter</button>
+        <button class="secondary-btn" onclick="openBuyModalFromCard(this)">Voir</button>
+      </div>
+    `;
+    grid.appendChild(card);
+
+    const thumbs = card.querySelectorAll('.thumbs img');
+    thumbs.forEach(img => {
+      img.addEventListener('click', (e)=>{
+        thumbs.forEach(t=>t.classList.remove('active'));
+        img.classList.add('active');
+        card.querySelector('.main-photo').src = img.dataset.src || img.src;
+        // open buy modal for quick purchase on click (as requested)
+        openBuyModal(img);
+      });
+      img.addEventListener('dblclick', ()=> openImageLightbox(img.dataset.src || img.src));
+    });
+
+    card.querySelector('.main-photo').addEventListener('click', (e)=>{
+      openBuyModal(e.currentTarget);
+    });
+  });
+}
+renderProducts();
+
+/* Recommendations simple */
+function renderRecommendations() {
+  const rec = el('#recommendGrid');
+  rec.innerHTML = '';
+  PRODUCTS.slice(0,4).forEach(p=>{
+    const box = document.createElement('div');
+    box.style.minWidth = '180px';
+    box.style.background = 'white';
+    box.style.borderRadius = '10px';
+    box.style.padding = '8px';
+    box.style.border = '1px solid rgba(44,44,44,0.04)';
+    box.style.boxShadow = 'var(--shadow)';
+    box.innerHTML = `
+      <img src="${p.images[0]}" style="width:160px;height:100px;object-fit:cover;border-radius:8px">
+      <div style="font-weight:800;margin-top:6px">${p.name}</div>
+      <div style="color:var(--muted);font-size:13px">${p.price.toLocaleString()} CFA / m</div>
+    `;
+    box.addEventListener('click', ()=> {
+      const target = document.querySelector(`.product[data-id="${p.id}"]`);
+      target?.scrollIntoView({behavior:'smooth', block:'center'});
+      target?.querySelector('.main-photo')?.click();
+    });
+    rec.appendChild(box);
+  });
+}
+renderRecommendations();
+
+/* =========================
+   Filters & Search
+   ========================= */
+let CURRENT_LIST = PRODUCTS.slice();
+function applySearch(){
+  const q = el('#searchInput').value.trim().toLowerCase();
+  CURRENT_LIST = PRODUCTS.slice();
+  if(q){
+    CURRENT_LIST = CURRENT_LIST.filter(p => (p.name + ' ' + p.desc).toLowerCase().includes(q));
+  }
+  applySort();
+  renderProducts(CURRENT_LIST);
+}
+function filterByCategory(cat){
+  if(cat === 'all') CURRENT_LIST = PRODUCTS.slice();
+  else CURRENT_LIST = PRODUCTS.filter(p => p.category === cat);
+  elAll('.category-chip').forEach(ch => ch.style.background = ch.dataset.cat === cat ? 'rgba(201,162,39,0.12)' : 'transparent');
+  applySort();
+  renderProducts(CURRENT_LIST);
+}
+function applySort(){
+  const s = el('#sortSelect').value;
+  if(s === 'price-asc') CURRENT_LIST.sort((a,b)=>a.price - b.price);
+  else if(s === 'price-desc') CURRENT_LIST.sort((a,b)=>b.price - a.price);
+  else if(s === 'name-asc') CURRENT_LIST.sort((a,b)=>a.name.localeCompare(b.name));
+  else CURRENT_LIST.sort((a,b)=>b.rating - a.rating);
+  renderProducts(CURRENT_LIST);
+}
+function applyFilters(){ applySort(); }
+
+/* =========================
+   Lightbox & Buy modal
+   ========================= */
+function openImageLightbox(src){
+  const back = document.createElement('div');
+  back.className = 'modal-back';
+  back.innerHTML = `<div class="modal" style="max-width:900px;flex-direction:column">
+    <img src="${src}" style="max-width:100%;border-radius:8px">
+    <div style="margin-top:8px;text-align:right">
+      <button class="secondary-btn" onclick="this.closest('.modal-back').remove()">Fermer</button>
+    </div>
+  </div>`;
+  document.getElementById('modals').appendChild(back);
+  back.addEventListener('click', (e)=>{ if(e.target===back) back.remove(); });
+}
+
+function openBuyModal(imgOrEl){
+  const imgEl = imgOrEl;
+  const card = imgEl.closest('.product');
+  const id = card.dataset.id;
+  const product = PRODUCTS.find(p=>p.id === id);
+  if(!product) return;
+  const mainSrc = imgEl.dataset?.src || imgEl.src;
+
+  const back = document.createElement('div');
+  back.className = 'modal-back';
+  back.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="left">
+        <img src="${mainSrc}" alt="${product.name}">
+        <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+          ${product.images.map(s=>`<img src="${s}" style="width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="document.querySelector('.modal img').src='${s}'">`).join('')}
+        </div>
+      </div>
+      <div class="right">
+        <h3>${product.name}</h3>
+        <div class="small">${product.desc}</div>
+        <div style="margin-top:8px" class="small">Prix : <strong>${money(product.price)}</strong> / mètre</div>
+        <label>Quantité (mètres)</label>
+        <input type="number" id="modalQty" min="1" value="1">
+        <label>Nom (optionel)</label>
+        <input type="text" id="modalName" placeholder="Votre nom">
+        <label>Téléphone (optionel)</label>
+        <input type="text" id="modalPhone" placeholder="+221 ...">
+        <label>Remarque (optionel)</label>
+        <input type="text" id="modalNotes" placeholder="Ex: livraison urgente">
+        <div style="margin-top:10px" class="small">Total : <strong id="modalTotal">${money(product.price)}</strong></div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn" id="modalAdd">Ajouter au panier</button>
+          <button class="secondary-btn" id="modalClose">Fermer</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('modals').appendChild(back);
+
+  const qtyInput = back.querySelector('#modalQty');
+  const totalEl = back.querySelector('#modalTotal');
+  const nameInput = back.querySelector('#modalName');
+  const phoneInput = back.querySelector('#modalPhone');
+  const notesInput = back.querySelector('#modalNotes');
+
+  const updateTotal = ()=> {
+    const q = Math.max(1, parseInt(qtyInput.value||1,10));
+    const base = product.price * q;
+    const discount = q >= 5 ? Math.round(base * 0.10) : 0;
+    const final = base - discount;
+    totalEl.textContent = money(final);
+  };
+  qtyInput.addEventListener('input', updateTotal);
+
+  back.querySelector('#modalClose').addEventListener('click', ()=> back.remove());
+  back.querySelector('#modalAdd').addEventListener('click', ()=>{
+    const q = Math.max(1, parseInt(qtyInput.value||1,10));
+    const nameVal = nameInput.value.trim();
+    const phoneVal = phoneInput.value.trim();
+    const notesVal = notesInput.value.trim();
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      qty: q,
+      img: mainSrc,
+      notes: notesVal,
+      buyerName: nameVal,
+      buyerPhone: phoneVal
+    });
+    back.remove();
+  });
+
+  back.addEventListener('click', (e)=>{ if(e.target === back) back.remove(); });
+}
+
+function openBuyModalFromCard(btn){
+  const card = btn.closest('.product');
+  card.querySelector('.main-photo').click();
+}
+
+/* =========================
+   Cart logic (promo 10% for qty>=5)
+   ========================= */
+function addToCart(item){
+  const existing = CART.find(i=>i.id === item.id);
+  if(existing){
+    existing.qty += item.qty;
+    if(item.notes) existing.notes = item.notes;
+    if(item.buyerName) existing.buyerName = item.buyerName;
+    if(item.buyerPhone) existing.buyerPhone = item.buyerPhone;
+  } else {
+    CART.push(item);
+  }
+  saveCart(); renderCart(); flashCartButton(); openCart();
+}
+
+function renderCart(){
+  const list = el('#cartList');
+  const totalEl = el('#cartTotal');
+  list.innerHTML = '';
+  if(CART.length === 0){
+    list.textContent = 'Le panier est vide';
+    el('#cartCount').textContent = '0';
+    totalEl.textContent = '0 CFA';
+    return;
+  }
+  let grandTotal = 0;
+  CART.forEach((it, idx)=>{
+    const lineBase = it.price * it.qty;
+    const lineDiscount = it.qty >= 5 ? Math.round(lineBase * 0.10) : 0;
+    const lineTotal = lineBase - lineDiscount;
+    grandTotal += lineTotal;
+    const row = document.createElement('div');
+    row.className = 'cart-item';
+    row.innerHTML = `
+      <img src="${it.img}" alt="${it.name}">
+      <div class="cart-mini-meta">
+        <div style="font-weight:800">${it.name}</div>
+        <div class="small">${it.qty} m • ${money(it.price)} / m</div>
+        ${it.notes ? `<div class="small">Remarque: ${escapeHtml(it.notes)}</div>` : ''}
+        ${it.qty >=5 ? `<div style="color:green;font-weight:800" class="small">Remise 10% appliquée</div>` : ''}
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:900">${money(lineTotal)}</div>
+        <div style="display:flex;gap:6px;margin-top:6px;justify-content:flex-end">
+          <button class="secondary-btn" onclick="changeQty(${idx},1)">+</button>
+          <button class="secondary-btn" onclick="changeQty(${idx},-1)">−</button>
+          <button class="secondary-btn" onclick="removeItem(${idx})">Suppr</button>
+        </div>
+      </div>
+    `;
+    list.appendChild(row);
+  });
+  totalEl.textContent = grandTotal.toLocaleString() + ' CFA';
+  el('#cartCount').textContent = CART.reduce((s,i)=>s+i.qty,0);
+}
+
+/* change qty / remove */
+function changeQty(idx, delta){
+  if(!CART[idx]) return;
+  CART[idx].qty = Math.max(0, CART[idx].qty + delta);
+  if(CART[idx].qty === 0) CART.splice(idx,1);
+  saveCart(); renderCart();
+}
+function removeItem(idx){ CART.splice(idx,1); saveCart(); renderCart(); }
+
+/* cart open/close */
+function toggleCart(){ const panel = el('#cartPanel'); panel.classList.toggle('open'); }
+function openCart(){ el('#cartPanel').classList.add('open'); }
+
+/* quick add */
+function addFromCard(btn){
+  const card = btn.closest('.product');
+  const id = card.dataset.id;
+  const product = PRODUCTS.find(p=>p.id === id);
+  const qty = Math.max(1, parseInt(card.querySelector('.quick-qty').value||1,10));
+  const img = card.querySelector('.thumbs img').dataset.src || card.querySelector('.thumbs img').src;
+  addToCart({id: product.id, name: product.name, price: product.price, qty, img});
+}
+
+/* small visual */
+function flashCartButton(){ el('#cartButton').animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:300}); }
+
+/* escape */
+function escapeHtml(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* =========================
+   WhatsApp & Payments
+   ========================= */
+function openWhatsApp(){
+  if(CART.length === 0){ alert('Le panier est vide.'); return; }
+  let total = 0;
+  let msg = 'Bonjour,%0AJ’aimerais commander :%0A';
+  CART.forEach(it=>{
+    const base = it.price * it.qty;
+    const disc = it.qty >= 5 ? Math.round(base * 0.10) : 0;
+    const ln = base - disc;
+    msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`;
+    if(it.notes) msg += `  Remarque: ${encodeURIComponent(it.notes)}%0A`;
+    total += ln;
+  });
+  msg += `Total : ${total.toLocaleString()} CFA%0A%0ANom : %0ATéléphone :%0AAdresse :`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(decodeURIComponent(msg))}`;
+  window.open(url, '_blank');
+}
+
+function openPayModal(method){
+  if(CART.length === 0){ alert('Le panier est vide.'); return; }
+  const total = CART.reduce((s,it)=> {
+    const base = it.price * it.qty;
+    const discount = it.qty >= 5 ? Math.round(base * 0.10) : 0;
+    return s + (base - discount);
+  }, 0);
+  const number = method === 'wave' ? WAVE_NUMBER : ORANGE_NUMBER;
+  const label = method === 'wave' ? 'Wave (Promobile)' : 'Orange Money';
+  const qrText = `${label} ${number} Montant:${total}CFA`;
+  const qrUrl = `https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=${encodeURIComponent(qrText)}`;
+
+  const back = document.createElement('div');
+  back.className = 'modal-back';
+  back.innerHTML = `
+    <div class="modal" role="dialog">
+      <div style="flex:1">
+        <h3>${label}</h3>
+        <div class="small">Numéro : <strong>${number}</strong></div>
+        <div class="small">Montant : <strong>${total.toLocaleString()} CFA</strong></div>
+        <div style="margin-top:10px" class="small">Scannez le QR pour effectuer le paiement ou payez manuellement puis cliquez sur "J'ai payé" pour confirmer.</div>
+        <div style="margin-top:12px"><img src="${qrUrl}" alt="QR Code" style="max-width:220px;border:6px solid #fff;border-radius:10px"></div>
+        <label>Référence paiement (ex: transaction ID)</label>
+        <input type="text" id="payRef" placeholder="Ex: REF12345" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(44,44,44,0.06);margin-top:6px">
+      </div>
+      <div style="width:220px;display:flex;flex-direction:column;gap:8px;align-items:center">
+        <button class="btn" id="paidConfirm">J'ai payé — Confirmer</button>
+        <button class="secondary-btn" id="payClose">Fermer</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#payClose').addEventListener('click', ()=> back.remove());
+  back.querySelector('#paidConfirm').addEventListener('click', ()=>{
+    const ref = back.querySelector('#payRef').value.trim();
+    let msg = `Bonjour, j'ai effectué un paiement de ${total.toLocaleString()} CFA via ${label} (${number}).%0ARéférence: ${encodeURIComponent(ref)}%0ACommande:%0A`;
+    CART.forEach(it => {
+      const base = it.price * it.qty;
+      const disc = it.qty >=5 ? Math.round(base * 0.10) : 0;
+      const ln = base - disc;
+      msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`;
+    });
+    msg += `Total : ${total.toLocaleString()} CFA%0A%0ANom :%0ATéléphone :%0AAdresse :`;
+    const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(decodeURIComponent(msg))}`;
+    window.open(wa, '_blank');
+    back.remove();
+  });
+}
+
+/* =========================
+   Init
+   ========================= */
+renderCart();
+el('#cartButton').addEventListener('click', toggleCart);
+el('#searchInput').addEventListener('keydown', (e)=>{ if(e.key === 'Enter') applySearch(); });
+document.addEventListener('DOMContentLoaded', ()=>{ renderProducts(PRODUCTS); renderRecommendations(); renderCart(); });
+</script>
+</body>
+</html>
