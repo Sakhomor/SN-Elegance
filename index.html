@@ -495,7 +495,7 @@
     handle.addEventListener('dblclick', ()=>{ localStorage.removeItem('cartPanelPos'); panel.style.left='auto'; panel.style.top='auto'; panel.style.right='18px'; panel.style.bottom='92px'; panel.style.position='fixed'; });
   })();
 
-  /* Cookie banner behaviour (no AdSense) */
+  /* Cookie banner behaviour (AdSense) */
   if(localStorage.getItem('cookiesAccepted') === 'true'){ document.getElementById('cookie-banner').style.display='none'; }
   document.getElementById('accept-cookies').addEventListener('click', function(){ localStorage.setItem('cookiesAccepted','true'); document.getElementById('cookie-banner').style.display='none'; /* optionally load analytics here if desired */ });
 
