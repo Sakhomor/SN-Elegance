@@ -2,7 +2,7 @@
 
 Bienvenue sur SN-Élégance 221, une boutique en ligne moderne et élégante spécialisée dans les tissus Getzner haut de gamme (Magnum, Brocade, Wifi, Focus…).
 
-Lien du site: [https://sakhomor25.github.io/SN-Elegance/](https://sakhomor25.github.io/SN-Elegance/)
+Lien du site: [https://sakhomor.github.io/SN-Elegance/](https://sakhomor25.github.io/SN-Elegance/)
 
 SN-Élégance 221 est un site e-commerce conçu pour offrir une expérience fluide, rapide et luxueuse :
 - Panier flottant déplaçable(mobile & desktop)
