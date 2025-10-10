@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
+  
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D17R52MVJF"></script>
 <script>
+  
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"
      crossorigin="anonymous"></script>
+  
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-D17R52MVJF');
-</script>
+  gtag('config', 'G-D17R52MVJF');</script>
+  
   <meta name="google-adsense-account" content="ca-pub-9469166621216194">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -126,7 +128,6 @@
 </head>
 <body>
 
-  <!-- cookie banner (GA load optional after accept) -->
   <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#111;color:#fff;padding:12px;text-align:center;z-index:1000;font-size:14px;">
     Ce site utilise des cookies pour améliorer votre expérience.
     <button id="accept-cookies" style="margin-left:10px;padding:6px 10px;background:#222;color:white;border:none;cursor:pointer;border-radius:6px;">Accepter</button>
@@ -232,9 +233,6 @@
   </footer>
 
   <script>
-  /* =========================
-     Produits (tes liens conservés)
-     ========================= */
   const PRODUCTS = [
     {
       id: 'magnum',
@@ -297,10 +295,8 @@
       rating: 4.8, reviews: 21
     }
   ];
-
-  /* =========================
+  
      Config & state
-     ========================= */
   const WHATSAPP_NUMBER = "221754437491";
   const WAVE_NUMBER = "+221754437491";
   const ORANGE_NUMBER = "+221784324745";
@@ -308,11 +304,8 @@
   function saveCart(){ localStorage.setItem('sn_cart_pro', JSON.stringify(CART)); }
   const money = n => n.toLocaleString() + " CFA";
   const el = sel => document.querySelector(sel);
-  const elAll = sel => Array.from(document.querySelectorAll(sel));
-
-  /* =========================
+  const elAll = sel => Array.from(documenent)
      Render produits
-     ========================= */
   function renderProducts(list = PRODUCTS) {
     const grid = el('#productsGrid'); grid.innerHTML = '';
     list.forEach(p => {
@@ -361,20 +354,15 @@
       rec.appendChild(box);
     });
   }
-  renderRecommendations();
-
-  /* =========================
+  renderRecommendations()
      Search & filter
-     ========================= */
   let CURRENT_LIST = PRODUCTS.slice();
   function applySearch(){ const q = el('#searchInput').value.trim().toLowerCase(); CURRENT_LIST = PRODUCTS.slice(); if(q) CURRENT_LIST = CURRENT_LIST.filter(p => (p.name + ' ' + p.desc).toLowerCase().includes(q)); applySort(); renderProducts(CURRENT_LIST); }
   function filterByCategory(cat){ if(cat==='all') CURRENT_LIST=PRODUCTS.slice(); else CURRENT_LIST = PRODUCTS.filter(p=>p.category === cat); elAll('.category-chip').forEach(ch => ch.style.background = ch.dataset.cat === cat ? 'rgba(230,191,82,0.12)' : 'transparent'); applySort(); renderProducts(CURRENT_LIST); }
   function applySort(){ const s = el('#sortSelect').value; if(s==='price-asc') CURRENT_LIST.sort((a,b)=>a.price-b.price); else if(s==='price-desc') CURRENT_LIST.sort((a,b)=>b.price-a.price); else if(s==='name-asc') CURRENT_LIST.sort((a,b)=>a.name.localeCompare(b.name)); else CURRENT_LIST.sort((a,b)=>b.rating-a.rating); renderProducts(CURRENT_LIST); }
   function applyFilters(){ applySort(); }
 
-  /* =========================
      Lightbox & buy modal
-     ========================= */
   function openImageLightbox(src){
     const back = document.createElement('div'); back.className='modal-back';
     back.innerHTML = `<div class="modal" style="max-width:900px;flex-direction:column"><img src="${src}" style="max-width:100%;border-radius:8px"><div style="margin-top:8px;text-align:right"><button class="secondary-btn" onclick="this.closest('.modal-back').remove()">Fermer</button></div></div>`;
@@ -400,11 +388,8 @@
     back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
   }
 
-  function openBuyModalFromCard(btn){ const card = btn.closest('.product'); card.querySelector('.main-photo').click(); }
-
-  /* =========================
+  function openBuyModalFromCard(btn){ const card = btn.closest('.product'); card.querySelector('.main-photo').clic
      Cart logic
-     ========================= */
   function addToCart(item){
     const existing = CART.find(i=>i.id === item.id);
     if(existing){ existing.qty += item.qty; if(item.notes) existing.notes = item.notes; if(item.buyerName) existing.buyerName = item.buyerName; if(item.buyerPhone) existing.buyerPhone = item.buyerPhone; }
