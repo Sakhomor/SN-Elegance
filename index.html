@@ -1,53 +1,42 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta name="google-adsense-account" content="ca-pub-9469166621216194">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SN-Élégance 221 — Boutique</title>
-  <meta name="description" content="SN-Élégance 221 — Tissus Getzner premium. Achetez au mètre : Magnum, Brocade, Wifi, Focus. Paiement Wave & Orange Money. Commande via WhatsApp."/> 
-  
+  <title>SN-Élégance 221 — Premium V2 (Statique + EADE)</title>
+  <meta name="description" content="SN-Élégance 221 — Boutique premium de tissus Getzner. Achat au mètre, paiement Wave & Orange Money, commande via WhatsApp. Espace client & back-office vendeur (localStorage)." />
+  <meta name="theme-color" content="#0b0b0b">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"crossorigin="anonymous"></script
   <style>
+  google.com, pub-9469166621216194, DIRECT, f08c47fec0942fa0
+  
     :root{
-      /* palette moderne : noir + doré dégradé + blanc cassé */
-      --ivory:#F6F2EA;
-      --gold-1:#C9A227;
-      --gold-2:#E6BF52;
+      --ivory:#F6F2EA; --gold-1:#C9A227; --gold-2:#E6BF52;
       --gold-grad: linear-gradient(90deg,var(--gold-1),var(--gold-2));
-      --dark:#121212;
-      --muted:#6f6b64;
-      --card:#ffffff;
-      --radius:12px;
-      --shadow: 0 12px 36px rgba(18,18,18,0.12);
-      font-family:"Inter","Segoe UI",Roboto,Arial,sans-serif;
+      --bg-dark:#0b0b0b; --card-dark:#0f0f10; --muted:#8b857d; --white:#f8f6f2; --shadow:0 12px 36px rgba(0,0,0,0.36);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--ivory),#f3efe8);color:var(--dark);-webkit-font-smoothing:antialiased}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--ivory),#f3efe8);color:var(--bg-dark);-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:90;background:#0f0f10;color:#fff;border-bottom:1px solid rgba(255,255,255,0.03)}
+    header{position:sticky;top:0;z-index:90;background:var(--card-dark);color:var(--white);border-bottom:1px solid rgba(255,255,255,0.03)}
     .header-inner{max-width:1200px;margin:0 auto;padding:12px 18px;display:flex;gap:12px;align-items:center}
     .logo{height:64px;width:auto}
-    .brand{margin-left:6px;color:var(--ivory)}
-    .site-title{font-size:18px;font-weight:800;color:var(--ivory)}
+    .site-title{font-size:18px;font-weight:800;color:var(--white)}
     .site-sub{font-size:12px;color:var(--muted)}
     .search-wrap{flex:1;display:flex;align-items:center;gap:8px;margin-left:12px}
     .search-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:#111;color:#fff;font-size:15px}
-    .search-btn{padding:10px 12px;border-radius:10px;border:none;background:var(--gold-1);background-image:var(--gold-grad);color:#07100a;font-weight:800;cursor:pointer}
-    .top-actions{display:flex;gap:8px;align-items:center;margin-left:auto;font-size:13px;color:var(--ivory)}
+    .search-btn{padding:10px 12px;border-radius:10px;border:none;background-image:var(--gold-grad);color:#07100a;font-weight:800;cursor:pointer}
+    .top-actions{display:flex;gap:8px;align-items:center;margin-left:auto;font-size:13px;color:var(--white)}
     .category-menu{display:flex;gap:8px;align-items:center;padding:10px 18px;overflow:auto;background:#0b0b0b}
-
-    main{max-width:1200px;margin:18px auto;padding:0 16px 140px}
+    main{max-width:1200px;margin:18px auto;padding:0 16px 160px}
     .hero{display:flex;gap:18px;align-items:center;margin:10px 0 20px}
     .hero-left{flex:1}
-    .hero h1{margin:0;font-size:26px;color:#fff}
+    .hero h1{margin:0;font-size:26px;color:var(--white)}
     .hero p{color:var(--muted);margin:8px 0}
-    .promo-bar{background:rgba(230,191,82,0.08);padding:10px;border-radius:10px;border:1px solid rgba(230,191,82,0.12);display:inline-block;color:var(--ivory)}
-
+    .promo-bar{background:rgba(230,191,82,0.08);padding:10px;border-radius:10px;border:1px solid rgba(230,191,82,0.12);display:inline-block;color:var(--white)}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#0f0f10;color:#fff;border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:480px}
+    .card{background:var(--card-dark);color:var(--white);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:480px}
     .thumbs{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .thumbs img{width:86px;height:86px;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:transform .12s, box-shadow .12s}
     .thumbs img.active{border-color:var(--gold-1)}
@@ -57,35 +46,24 @@
     .price{font-weight:900;color:var(--gold-1);font-size:18px;text-align:center;margin-bottom:10px}
     .controls{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:auto}
     input[type="number"]{width:90px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);text-align:center;background:#111;color:#fff}
-    .add-btn{background-image:var(--gold-grad);color:#07100a;padding:10px 14px;border-radius:10px;border:none;font-weight:800;cursor:pointer}
+    .add-btn{background-image:var(--gold-grad);color:#07100a;padding:10px 14px;border-radius:10px;border:none;font-weight:800;cursor:pointer;transition:transform .12s}
+    .add-btn:hover{transform:translateY(-3px)}
     .secondary-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;cursor:pointer;color:#fff}
-
-    /* floating cart button (draggable) */
-    .cart-floating{
-      position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background-image:var(--gold-grad);display:flex;align-items:center;justify-content:center;cursor:grab;box-shadow:0 18px 48px rgba(0,0,0,0.25);z-index:160;touch-action:none;
-    }
+    .cart-floating{position:fixed;right:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background-image:var(--gold-grad);display:flex;align-items:center;justify-content:center;cursor:grab;box-shadow:0 18px 48px rgba(0,0,0,0.25);z-index:160;touch-action:none;}
     .cart-floating:active{cursor:grabbing}
     .cart-floating .count{position:absolute;top:-6px;right:-6px;background:#07100a;color:#fff;border-radius:50%;padding:4px 7px;font-size:12px;font-weight:800}
-
-    /* cart panel: always present (hidden by opacity) + animated slide-in */
-    .cart-panel{
-      position:fixed;right:18px;bottom:92px;width:420px;max-height:78vh;background:#0f0f10;border-radius:12px;padding:8px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 40px 120px rgba(0,0,0,0.28);overflow:auto;z-index:150;
-      opacity:0;visibility:hidden;transform:translateX(18px);transition:transform .28s cubic-bezier(.2,.9,.2,1),opacity .24s ease,visibility .24s;touch-action:none;
-    }
-    .cart-panel.open{opacity:1;visibility:visible;transform:translateX(0);}
-
+    .cart-panel{position:fixed;right:18px;bottom:92px;width:420px;max-height:78vh;background:var(--card-dark);border-radius:12px;padding:8px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 40px 120px rgba(0,0,0,0.28);overflow:auto;z-index:150;opacity:0;visibility:hidden;transform:translateX(28px);transition:transform .28s cubic-bezier(.2,.9,.2,1),opacity .24s ease,visibility .24s;touch-action:none;}
+    .cart-panel.open{opacity:1;visibility:visible;transform:translateX(0)}
     .cart-drag-handle{width:100%;height:36px;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;gap:8px;padding:6px 8px;margin-bottom:8px;cursor:grab}
     .cart-item{display:flex;gap:8px;align-items:center;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);margin-bottom:8px}
     .cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
-    .cart-mini-meta{flex:1;color:var(--ivory)}
+    .cart-mini-meta{flex:1;color:var(--white)}
     .cart-total{display:flex;justify-content:space-between;align-items:center;font-weight:900;margin-top:8px;color:var(--gold-1)}
     .cart-actions{margin-top:10px;display:flex;gap:6px;flex-direction:column}
     .pay-row{display:flex;gap:8px}
     .pay-wave{flex:1;background:#0dbc5f;color:#07100a;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
     .pay-orange{flex:1;background:#ff7a00;color:#07100a;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
     .whatsapp-btn{background:#25D366;color:#07100a;padding:10px;border-radius:8px;border:none;font-weight:800;cursor:pointer}
-
-    /* modal */
     .modal-back{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:200}
     .modal{background:#fff;border-radius:12px;padding:16px;max-width:920px;width:94%;display:flex;gap:14px;box-shadow:0 30px 90px rgba(0,0,0,0.12)}
     .modal .left{flex:1}
@@ -94,12 +72,16 @@
     .modal h3{margin:0;color:var(--gold-1)}
     .modal label{display:block;margin-top:8px;color:#555;font-size:13px}
     .small{font-size:13px;color:var(--muted)}
-
     .faq{margin-top:26px;background:var(--ivory);padding:16px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
     footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted)}
-
-    /* responsive */
-    @media(max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr)} .cart-panel{right:12px;width:360px} }
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:110px;background:rgba(10,10,10,0.9);color:#fff;padding:10px 14px;border-radius:10px;z-index:9999;display:flex;gap:8px;align-items:center;box-shadow:0 12px 36px rgba(0,0,0,0.4)}
+    .seller-panel{position:fixed;left:18px;top:92px;width:360px;max-height:78vh;background:var(--card-dark);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 40px 120px rgba(0,0,0,0.28);overflow:auto;z-index:155;display:none}
+    .seller-panel.open{display:block}
+    .form-row{display:flex;gap:8px;flex-direction:column;margin-bottom:8px}
+    .form-row input,.form-row textarea,.form-row select{padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);width:100%}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);padding:8px;border-radius:8px;cursor:pointer}
+    .chatbot-btn{position:fixed;left:18px;bottom:18px;background:#25D366;color:#07100a;padding:12px;border-radius:999px;border:none;box-shadow:0 14px 36px rgba(0,0,0,0.2);z-index:170}
+    @media(max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr)} .cart-panel{right:12px;width:360px} .seller-panel{width:320px} }
     @media(max-width:700px){
       .grid{grid-template-columns:1fr}
       .header-inner{flex-direction:column;align-items:flex-start}
@@ -109,23 +91,27 @@
       .thumbs img{width:72px;height:72px}
       .cart-floating{width:56px;height:56px}
       .cart-panel{max-height:60vh}
+      .seller-panel{left:12px;top:80px;width:calc(100% - 24px)}
     }
   </style>
-  
+
+  <!-- Google AdSense (laissé comme demandé) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"
      crossorigin="anonymous"></script>
 </head>
 <body>
 
+  <!-- Cookie banner -->
   <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#111;color:#fff;padding:12px;text-align:center;z-index:1000;font-size:14px;">
     Ce site utilise des cookies pour améliorer votre expérience.
     <button id="accept-cookies" style="margin-left:10px;padding:6px 10px;background:#222;color:white;border:none;cursor:pointer;border-radius:6px;">Accepter</button>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-inner">
       <img class="logo" src="https://i.postimg.cc/fWJvXsJ4/SN-Elegange.png" alt="SN-Élégance logo">
-      <div class="brand">
+      <div style="margin-left:6px">
         <div class="site-title">SN-Élégance 221</div>
         <div class="site-sub">Des tissus de prestige pour donner vie à votre élégance unique.</div>
       </div>
@@ -142,7 +128,13 @@
       </div>
 
       <div class="top-actions">
-        <div>📞 +221 75 443 7491 • +221 78 432 4745</div>
+        <div style="text-align:right;font-size:13px;color:var(--white)">
+          📞 +221 75 443 7491<br>📞 +221 78 432 4745
+        </div>
+        <div style="margin-left:12px">
+          <button class="btn-ghost" id="openAuthBtn">Mon compte</button>
+          <button class="btn-ghost" id="openSellerBtn">Vendeur</button>
+        </div>
       </div>
     </div>
 
@@ -155,6 +147,7 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main>
     <section class="hero">
       <div class="hero-left">
@@ -162,25 +155,35 @@
         <p>Choisissez votre tissu, sélectionnez la quantité en mètres et confirmez en quelques clics. Paiement Wave & Orange Money disponibles.</p>
         <div style="margin-top:10px"><span class="promo-bar">Promo : -10% à partir de 5 mètres</span></div>
       </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="background:#fff;padding:10px;border-radius:8px;color:#07100a;font-weight:800">Livraison express disponible</div>
+      </div>
     </section>
 
-    <div id="productsGrid" class="grid"></div>
+    <div id="productsGrid" class="grid" aria-live="polite"></div>
 
     <section style="margin-top:20px">
-      <h3 style="color:var(--ivory)">Recommandés pour vous</h3>
+      <h3 style="color:var(--white)">Recommandés pour vous</h3>
       <div id="recommendGrid" style="display:flex;gap:12px;margin-top:12px;overflow:auto"></div>
     </section>
 
     <section class="faq">
       <h3>FAQ — Livraison & Paiement</h3>
-      <p><strong>Livraison locale :</strong> Nous livrons à Dakar et environs via moto/transporteur. Le tarif dépend de la distance.</p>
+      <p><strong>Livraison locale :</strong> Livraison à Dakar et environs via moto/transporteur. Le tarif dépend de la zone.</p>
       <p><strong>Livraison internationale :</strong> Sur demande — contactez-nous par WhatsApp pour un devis.</p>
-      <p><strong>Paiement :</strong> Wave (Promobile) et Orange Money acceptés. Vous pouvez payer via QR ou manuellement, puis confirmer via WhatsApp.</p>
-      <p><strong>Annulation / Réclamation :</strong> Contactez-nous immédiatement sur WhatsApp avec la référence et le reçu.</p>
+      <p><strong>Paiement :</strong> Wave (Promobile) et Orange Money acceptés — QR + confirmation. Après paiement, confirmez via WhatsApp.</p>
+    </section>
+
+    <section style="margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(90deg, rgba(201,162,39,0.06), rgba(0,108,103,0.02));">
+      <strong>Newsletter</strong>
+      <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+        <input id="newsletterEmail" placeholder="Votre email" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+        <button class="add-btn" onclick="subscribeNewsletter()">S'inscrire</button>
+      </div>
     </section>
   </main>
 
-  <!-- draggable floating cart button -->
+  <!-- Floating cart -->
   <div class="cart-floating" id="cartButton" title="Voir le panier" aria-label="Panier" role="button">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path d="M3 3h2l.344 2M7 13h10l3-8H6.5" stroke="#07100a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -189,23 +192,36 @@
     <div class="count" id="cartCount">0</div>
   </div>
 
-  <!-- draggable cart panel -->
+  <!-- Cart panel -->
   <div class="cart-panel" id="cartPanel" aria-live="polite">
     <div class="cart-drag-handle" id="cartHandle" tabindex="0" title="Glisser pour déplacer le panier">
       <svg width="18" height="18" viewBox="0 0 24 24" style="margin-right:8px"><path d="M3 12h18" stroke="#777" stroke-width="1.6" stroke-linecap="round"/></svg>
-      <strong style="flex:1;color:var(--ivory)">🛒 Votre panier</strong>
+      <strong style="flex:1;color:var(--white)">🛒 Votre panier</strong>
       <button onclick="document.getElementById('cartPanel').classList.remove('open')" class="secondary-btn" title="Fermer">Fermer</button>
     </div>
 
-    <div id="cartList" class="cart-list" style="padding:6px;color:var(--ivory)">Le panier est vide</div>
+    <div id="cartList" class="cart-list" style="padding:6px;color:var(--white)">Le panier est vide</div>
 
     <div class="cart-total">
-      <div style="color:var(--ivory)">Total</div>
+      <div style="color:var(--white)">Total</div>
       <div id="cartTotal">0 CFA</div>
     </div>
 
+    <div style="margin-top:8px;color:var(--muted);font-size:13px">Choisissez la livraison et le paiement ci-dessous :</div>
+
+    <div style="margin-top:8px">
+      <label class="small">Mode de livraison</label>
+      <select id="deliveryZone" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px">
+        <option value="dakar">Dakar - 500 CFA</option>
+        <option value="pikine">Pikine - 800 CFA</option>
+        <option value="thies">Thiès - 1500 CFA</option>
+        <option value="region">Autre région (sur demande)</option>
+        <option value="retirer">Retrait en boutique - Gratuit</option>
+      </select>
+    </div>
+
     <div class="cart-actions">
-      <button class="whatsapp-btn" onclick="openWhatsApp()">Commander via WhatsApp</button>
+      <button class="whatsapp-btn" onclick="checkoutViaWhatsApp()">Commander via WhatsApp</button>
       <div class="pay-row">
         <button class="pay-wave" onclick="openPayModal('wave')">Payer Wave</button>
         <button class="pay-orange" onclick="openPayModal('orange')">Payer Orange</button>
@@ -214,279 +230,529 @@
     </div>
   </div>
 
+  <!-- Seller panel -->
+  <aside class="seller-panel" id="sellerPanel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <strong style="color:var(--white)">🧰 Tableau vendeur</strong>
+      <button class="btn-ghost" id="closeSellerBtn">Fermer</button>
+    </div>
+
+    <div style="margin-bottom:8px;color:var(--muted);font-size:13px">Ajouter / modifier / supprimer des produits. Toutes les modifications sont stockées localement (localStorage).</div>
+
+    <div style="margin-bottom:8px">
+      <button class="add-btn" id="newProductBtn">Nouveau produit</button>
+      <button class="btn-ghost" id="exportBtn">Exporter produits (JSON)</button>
+      <button class="btn-ghost" id="exportOrdersBtn">Exporter commandes (CSV)</button>
+      <button class="btn-ghost" id="importBtn">Importer produits (JSON)</button>
+      <input id="importFile" type="file" accept="application/json" style="display:none">
+    </div>
+
+    <div id="sellerList"></div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+
+    <div>
+      <strong style="color:var(--white)">📦 Commandes</strong>
+      <div id="ordersList" style="margin-top:8px;color:var(--muted)">Aucune commande</div>
+    </div>
+  </aside>
+
+  <!-- Chatbot button -->
+  <button class="chatbot-btn" id="openChatBtn" title="Aide / Chat">💬 Aide</button>
+
+  <!-- Modals container -->
   <div id="modals"></div>
+
+  <!-- Toast container -->
+  <div id="toastContainer"></div>
 
   <footer>
     <div style="color:#fff">© 2025 SN-Élégance 221</div>
     <div class="small" style="color:var(--muted)">Téléphone : +221 75 443 7491 • +221 78 432 4745</div>
   </footer>
 
-  <script>
-  const PRODUCTS = [
-    {
-      id: 'magnum',
-      name: 'Getzner Magnum Gold',
-      price: 11000,
-      desc: 'Le tissu Getzner Magnum Gold est reconnu pour sa qualité exceptionnelle et son éclat raffiné. Idéal pour boubous et tenues de fête.',
-      category: 'magnum',
-      images: [
-        'https://i.postimg.cc/BQxHq1Wb/IMG-20250927-WA0060.jpg',
-        'https://i.postimg.cc/VL15WGTv/IMG-20250927-WA0074.jpg',
-        'https://i.postimg.cc/Wpm1zm3j/IMG-20250927-WA0066-1.jpg',
-        'https://i.postimg.cc/ryg27fsp/IMG-20250927-WA0070.jpg',
-        'https://i.postimg.cc/2yycsF9h/IMG-20250927-WA0064.jpg'
-      ],
-      rating: 4.7, reviews: 24
-    },
-    {
-      id: 'brocade',
-      name: 'Getzner Brocade',
-      price: 13000,
-      desc: 'Le Brocade est un tissu élégant aux motifs tissés, parfait pour des tenues traditionnelles et cérémonies.',
-      category: 'brocade',
-      images: [
-        'https://i.postimg.cc/5yz79NJk/IMG-20250927-WA0084.jpg',
-        'https://i.postimg.cc/L89TwVq2/IMG-20250927-WA0086-1.jpg',
-        'https://i.postimg.cc/R0r0qgcC/IMG-20250927-WA0085.jpg',
-        'https://i.postimg.cc/wvqgsZ36/IMG-20250927-WA0103.jpg',
-        'https://i.postimg.cc/mDDK4sth/IMG-20250927-WA0102-1.jpg'
-      ],
-      rating: 4.9, reviews: 31
-    },
-    {
-      id: 'wifi',
-      name: 'Getzner Wifi',
-      price: 13000,
-      desc: 'Le tissu Wifi séduit par ses motifs originaux et sa souplesse, idéal pour un usage quotidien ou événementiel.',
-      category: 'wifi',
-      images: [
-        'https://i.postimg.cc/15rxDJhX/IMG-20250927-WA0094.jpg',
-        'https://i.postimg.cc/WbnKdzgd/IMG-20250927-WA0096-1.jpg',
-        'https://i.postimg.cc/02Wngw7Z/IMG-20250917-WA0031.jpg',
-        'https://i.postimg.cc/7LgSLGJ7/IMG-20250927-WA0098.jpg',
-        'https://i.postimg.cc/MZrfqb3h/IMG-20250917-WA0028.jpg'
-      ],
-      rating: 4.6, reviews: 18
-    },
-    {
-      id: 'focus',
-      name: 'Getzner Focus',
-      price: 14000,
-      desc: 'Le Focus se distingue par sa texture soyeuse et son tombé fluide, parfait pour des tenues modernes et élégantes.',
-      category: 'focus',
-      images: [
-        'https://i.postimg.cc/v8jTp8c6/IMG-20250927-WA0050.jpg',
-        'https://i.postimg.cc/bw0vDQLG/IMG-20250927-WA0054.jpg',
-        'https://i.postimg.cc/Dfts1PQB/IMG-20250927-WA0041.jpg',
-        'https://i.postimg.cc/Wbw3tG5t/IMG-20250927-WA0044.jpg',
-        'https://i.postimg.cc/tJtXZbNR/IMG-20250927-WA0031.jpg'
-      ],
-      rating: 4.8, reviews: 21
-    }
+<script>
+/* =========================
+   Premium V2 + EADE (statique)
+   - localStorage: products, cart, users, orders
+   - delivery zones and fees
+   - chatbot (simple), newsletter capture
+   - seller panel with export orders (CSV)
+   ========================= */
+
+const KEY_PRODUCTS = 'sn_products_v2';
+const KEY_CART = 'sn_cart_v2';
+const KEY_USERS = 'sn_users_v2';
+const KEY_ORDERS = 'sn_orders_v2';
+const KEY_SELLER_AUTH = 'sn_seller_auth';
+const KEY_NEWS = 'sn_newsletter_v1';
+
+const WHATSAPP = '221754437491';
+const WAVE = '+221754437491';
+const ORANGE = '+221784324745';
+const SELLER_PASS = 'SNAdmin2025!'; // change locally if desired
+
+// helper
+const el = s => document.querySelector(s);
+const elAll = s => Array.from(document.querySelectorAll(s));
+const money = n => Number(n).toLocaleString() + ' CFA';
+const read = (k, fallback) => { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch(e){ return fallback; } };
+const write = (k,v) => localStorage.setItem(k, JSON.stringify(v));
+const showToast = (t, ms=1500)=>{ const d = document.createElement('div'); d.className='toast'; d.textContent = t; document.getElementById('toastContainer').appendChild(d); setTimeout(()=>{ d.style.opacity=0; setTimeout(()=>d.remove(),320)}, ms); };
+
+// default dataset (only if not present)
+let PRODUCTS = read(KEY_PRODUCTS, null);
+if(!PRODUCTS){
+  PRODUCTS = [
+    { id:'magnum', name:'Getzner Magnum Gold', price:11000, desc:'Tissu de prestige, parfait pour boubous et cérémonies.', category:'magnum',
+      images:['https://i.postimg.cc/BQxHq1Wb/IMG-20250927-WA0060.jpg','https://i.postimg.cc/VL15WGTv/IMG-20250927-WA0074.jpg','https://i.postimg.cc/Wpm1zm3j/IMG-20250927-WA0066-1.jpg'], rating:4.7, reviews:24 },
+    { id:'brocade', name:'Getzner Brocade', price:13000, desc:'Brocade riche en motifs, idéal pour tenues traditionnelles.', category:'brocade',
+      images:['https://i.postimg.cc/5yz79NJk/IMG-20250927-WA0084.jpg','https://i.postimg.cc/L89TwVq2/IMG-20250927-WA0086-1.jpg','https://i.postimg.cc/R0r0qgcC/IMG-20250927-WA0085.jpg'], rating:4.9, reviews:31 },
+    { id:'wifi', name:'Getzner Wifi', price:13000, desc:'Tissu moderne, motifs originaux et belle souplesse.', category:'wifi',
+      images:['https://i.postimg.cc/15rxDJhX/IMG-20250927-WA0094.jpg','https://i.postimg.cc/WbnKdzgd/IMG-20250927-WA0096-1.jpg','https://i.postimg.cc/02Wngw7Z/IMG-20250917-WA0031.jpg'], rating:4.6, reviews:18 },
+    { id:'focus', name:'Getzner Focus', price:14000, desc:'Texture soyeuse, tombé fluide — parfait pour tenues modernes.', category:'focus',
+      images:['https://i.postimg.cc/v8jTp8c6/IMG-20250927-WA0050.jpg','https://i.postimg.cc/bw0vDQLG/IMG-20250927-WA0054.jpg','https://i.postimg.cc/Dfts1PQB/IMG-20250927-WA0041.jpg'], rating:4.8, reviews:21 }
   ];
-  
-     Config & state
-  const WHATSAPP_NUMBER = "221754437491";
-  const WAVE_NUMBER = "+221754437491";
-  const ORANGE_NUMBER = "+221784324745";
-  let CART = JSON.parse(localStorage.getItem('sn_cart_pro')||'[]');
-  function saveCart(){ localStorage.setItem('sn_cart_pro', JSON.stringify(CART)); }
-  const money = n => n.toLocaleString() + " CFA";
-  const el = sel => document.querySelector(sel);
-  const elAll = sel => Array.from(documenent)
-     Render produits
-  function renderProducts(list = PRODUCTS) {
-    const grid = el('#productsGrid'); grid.innerHTML = '';
-    list.forEach(p => {
-      const card = document.createElement('article');
-      card.className = 'card product';
-      card.dataset.id = p.id; card.dataset.name = p.name; card.dataset.price = p.price; card.dataset.desc = p.desc;
-      card.innerHTML = `
-        <img class="main-photo" src="${p.images[0]}" alt="${p.name}">
-        <div class="thumbs">${p.images.map((src,i)=>`<img data-src="${src}" ${i===0? 'class="active"':''} src="${src}" alt="${p.name}">`).join('')}</div>
-        <div class="title">${p.name}</div>
-        <div class="desc">${p.desc}</div>
-        <div style="display:flex;justify-content:center;gap:10px;align-items:center">
-          <div class="price">${p.price.toLocaleString()} CFA / m</div>
-          <div style="margin-left:6px;color:var(--muted);font-size:13px">⭐ ${p.rating} (${p.reviews})</div>
+  write(KEY_PRODUCTS, PRODUCTS);
+}
+
+let CART = read(KEY_CART, []);
+let USERS = read(KEY_USERS, []);
+let ORDERS = read(KEY_ORDERS, []);
+let NEWS = read(KEY_NEWS, []);
+
+function saveAll(){ write(KEY_PRODUCTS, PRODUCTS); write(KEY_CART, CART); write(KEY_USERS, USERS); write(KEY_ORDERS, ORDERS); write(KEY_NEWS, NEWS); }
+
+/* ---------- render products ---------- */
+function renderProducts(list = PRODUCTS){
+  const grid = el('#productsGrid'); grid.innerHTML = '';
+  list.forEach(p=>{
+    const card = document.createElement('article'); card.className='card product'; card.dataset.id = p.id;
+    card.innerHTML = `
+      <img class="main-photo" src="${p.images[0]}" alt="${p.name}">
+      <div class="thumbs">${p.images.map((s,i)=>`<img data-src="${s}" ${i===0?'class="active"':''} src="${s}" alt="${p.name}">`).join('')}</div>
+      <div class="title">${p.name}</div>
+      <div class="desc">${p.desc}</div>
+      <div style="display:flex;justify-content:center;gap:10px;align-items:center">
+        <div class="price">${p.price.toLocaleString()} CFA / m</div>
+        <div style="margin-left:6px;color:var(--muted);font-size:13px">⭐ ${p.rating} (${p.reviews})</div>
+      </div>
+      <div class="controls">
+        <input type="number" min="1" value="1" class="quick-qty" aria-label="Quantité (mètres)">
+        <button class="add-btn" onclick="addFromCard(this)">Ajouter</button>
+        <button class="secondary-btn" onclick="openBuyModalFromCard(this)">Voir</button>
+      </div>`;
+    grid.appendChild(card);
+
+    const thumbs = card.querySelectorAll('.thumbs img');
+    thumbs.forEach(img=>{
+      img.addEventListener('click', ()=>{ thumbs.forEach(t=>t.classList.remove('active')); img.classList.add('active'); card.querySelector('.main-photo').src = img.dataset.src || img.src; openBuyModal(img); });
+      img.addEventListener('dblclick', ()=> openImageLightbox(img.dataset.src || img.src));
+    });
+    card.querySelector('.main-photo').addEventListener('click', (e)=> openBuyModal(e.currentTarget));
+  });
+}
+renderProducts();
+
+/* ---------- recommendations ---------- */
+function renderRecommendations(){
+  const rec = el('#recommendGrid'); rec.innerHTML='';
+  PRODUCTS.slice(0,4).forEach(p=>{
+    const box = document.createElement('div');
+    box.style.minWidth='180px'; box.style.background='linear-gradient(180deg,#0f0f10,#0b0b0b)'; box.style.borderRadius='10px'; box.style.padding='8px'; box.style.border='1px solid rgba(255,255,255,0.04)'; box.style.boxShadow='var(--shadow)';
+    box.innerHTML = `<img src="${p.images[0]}" style="width:160px;height:100px;object-fit:cover;border-radius:8px"><div style="font-weight:800;margin-top:6px;color:var(--gold-2)">${p.name}</div><div style="color:var(--muted);font-size:13px">${p.price.toLocaleString()} CFA / m</div>`;
+    box.addEventListener('click', ()=> { const target = document.querySelector(`.product[data-id="${p.id}"]`); target?.scrollIntoView({behavior:'smooth', block:'center'}); target?.querySelector('.main-photo')?.click(); });
+    rec.appendChild(box);
+  });
+}
+renderRecommendations();
+
+/* ---------- search & filter ---------- */
+let CURRENT = PRODUCTS.slice();
+function applySearch(){ const q = el('#searchInput').value.trim().toLowerCase(); CURRENT = PRODUCTS.slice(); if(q) CURRENT = CURRENT.filter(p => (p.name + ' ' + p.desc).toLowerCase().includes(q)); applySort(); renderProducts(CURRENT); }
+function filterByCategory(cat){ if(cat==='all') CURRENT = PRODUCTS.slice(); else CURRENT = PRODUCTS.filter(p=>p.category===cat); elAll('.category-chip').forEach(ch => ch.style.background= ch.dataset.cat===cat ? 'rgba(230,191,82,0.12)':'transparent'); applySort(); renderProducts(CURRENT); }
+function applySort(){ const s = el('#sortSelect').value; if(s==='price-asc') CURRENT.sort((a,b)=>a.price-b.price); else if(s==='price-desc') CURRENT.sort((a,b)=>b.price-a.price); else if(s==='name-asc') CURRENT.sort((a,b)=>a.name.localeCompare(b.name)); else CURRENT.sort((a,b)=>b.rating-a.rating); renderProducts(CURRENT); }
+
+/* ---------- product modal & lightbox ---------- */
+function openImageLightbox(src){ const back = document.createElement('div'); back.className='modal-back'; back.innerHTML = `<div class="modal" style="max-width:900px;flex-direction:column"><img src="${src}" style="max-width:100%;border-radius:8px"><div style="margin-top:8px;text-align:right"><button class="secondary-btn" onclick="this.closest('.modal-back').remove()">Fermer</button></div></div>`; document.getElementById('modals').appendChild(back); back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); }); }
+
+function openBuyModal(imgOrEl){
+  const imgEl = imgOrEl;
+  const card = imgEl.closest('.product');
+  const id = card.dataset.id;
+  const product = PRODUCTS.find(p=>p.id === id);
+  if(!product) return;
+  const mainSrc = imgEl.dataset?.src || imgEl.src;
+  const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="left">
+        <img src="${mainSrc}" alt="${product.name}">
+        <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+          ${product.images.map(s=>`<img src="${s}" style="width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="document.querySelector('.modal img').src='${s}'">`).join('')}
         </div>
-        <div class="controls">
-          <input type="number" min="1" value="1" class="quick-qty">
-          <button class="add-btn" onclick="addFromCard(this)">Ajouter</button>
-          <button class="secondary-btn" onclick="openBuyModalFromCard(this)">Voir</button>
+      </div>
+      <div class="right">
+        <h3>${product.name}</h3>
+        <div class="small">${product.desc}</div>
+        <div style="margin-top:8px" class="small">Prix : <strong>${money(product.price)}</strong> / mètre</div>
+        <label>Quantité (mètres)</label><input type="number" id="modalQty" min="1" value="1">
+        <label>Nom (optionel)</label><input type="text" id="modalName" placeholder="Votre nom">
+        <label>Téléphone (optionel)</label><input type="text" id="modalPhone" placeholder="+221 ...">
+        <label>Remarque (optionel)</label><input type="text" id="modalNotes" placeholder="Ex: livraison urgente">
+        <div style="margin-top:10px" class="small">Total : <strong id="modalTotal">${money(product.price)}</strong></div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="add-btn" id="modalAdd">Ajouter au panier</button>
+          <button class="secondary-btn" id="modalClose">Fermer</button>
         </div>
-      `;
-      grid.appendChild(card);
+      </div>
+    </div>`;
+  document.getElementById('modals').appendChild(back);
 
-      const thumbs = card.querySelectorAll('.thumbs img');
-      thumbs.forEach(img => {
-        img.addEventListener('click', ()=>{
-          thumbs.forEach(t=>t.classList.remove('active')); img.classList.add('active');
-          card.querySelector('.main-photo').src = img.dataset.src || img.src;
-          openBuyModal(img); // quick open on click
-        });
-        img.addEventListener('dblclick', ()=> openImageLightbox(img.dataset.src || img.src));
-      });
-      card.querySelector('.main-photo').addEventListener('click', (e)=> openBuyModal(e.currentTarget));
+  const qtyInput = back.querySelector('#modalQty'); const totalEl = back.querySelector('#modalTotal'); const nameInput = back.querySelector('#modalName'); const phoneInput = back.querySelector('#modalPhone'); const notesInput = back.querySelector('#modalNotes');
+  const updateTotal = ()=> { const q = Math.max(1, parseInt(qtyInput.value||1,10)); const base = product.price * q; const discount = q>=5 ? Math.round(base*0.10):0; totalEl.textContent = money(base - discount); };
+  qtyInput.addEventListener('input', updateTotal);
+  back.querySelector('#modalClose').addEventListener('click', ()=> back.remove());
+  back.querySelector('#modalAdd').addEventListener('click', ()=>{
+    const q = Math.max(1, parseInt(qtyInput.value||1,10));
+    addToCart({ id: product.id, name: product.name, price: product.price, qty: q, img: mainSrc, notes: notesInput.value.trim(), buyerName: nameInput.value.trim(), buyerPhone: phoneInput.value.trim() });
+    back.remove();
+  });
+  back.addEventListener('click', (e)=>{ if(e.target === back) back.remove(); });
+}
+function openBuyModalFromCard(btn){ const card = btn.closest('.product'); card.querySelector('.main-photo').click(); }
+
+/* ---------- cart logic ---------- */
+function saveCart(){ write(KEY_CART, CART); }
+function addToCart(item){
+  // normalize
+  item.qty = Number(item.qty) || 1;
+  const same = CART.find(i=>i.id===item.id && i.img===item.img);
+  if(same){ same.qty += item.qty; if(item.notes) same.notes=item.notes; } else CART.push(item);
+  saveCart(); renderCart(); showToast('✅ Ajouté au panier'); if(navigator.vibrate) navigator.vibrate(80);
+}
+function renderCart(){
+  const list = el('#cartList'); const totalEl = el('#cartTotal'); list.innerHTML='';
+  if(CART.length===0){ list.textContent='Le panier est vide'; el('#cartCount').textContent='0'; totalEl.textContent='0 CFA'; return; }
+  let grand=0;
+  CART.forEach((it, idx)=>{
+    const base = it.price * it.qty; const disc = it.qty>=5 ? Math.round(base*0.10) : 0; const line = base - disc; grand += line;
+    const row = document.createElement('div'); row.className='cart-item';
+    row.innerHTML = `<img src="${it.img}" alt="${it.name}"><div class="cart-mini-meta"><div style="font-weight:800">${it.name}</div><div class="small">${it.qty} m • ${money(it.price)} / m</div>${it.notes?`<div class="small">Remarque: ${escapeHtml(it.notes)}</div>`:''}${it.qty>=5?`<div style="color:green;font-weight:800" class="small">Remise 10% appliquée</div>`:''}</div><div style="text-align:right"><div style="font-weight:900">${money(line)}</div><div style="display:flex;gap:6px;margin-top:6px;justify-content:flex-end"><button class="secondary-btn" onclick="changeQty(${idx},1)">+</button><button class="secondary-btn" onclick="changeQty(${idx},-1)">−</button><button class="secondary-btn" onclick="removeItem(${idx})">Suppr</button></div></div>`;
+    list.appendChild(row);
+  });
+  // add shipping fee display
+  const zone = el('#deliveryZone')?.value || 'dakar';
+  const shipping = getShippingFee(zone);
+  grand += shipping;
+  const shipRow = document.createElement('div'); shipRow.style.marginTop='6px'; shipRow.style.fontSize='13px'; shipRow.style.color='var(--muted)';
+  shipRow.innerHTML = `Frais de livraison (${zone}): <strong>${money(shipping)}</strong>`;
+  list.appendChild(shipRow);
+  totalEl.textContent = grand.toLocaleString() + ' CFA';
+  el('#cartCount').textContent = CART.reduce((s,i)=>s+i.qty,0);
+}
+
+function changeQty(idx, delta){ if(!CART[idx]) return; CART[idx].qty = Math.max(0, CART[idx].qty + delta); if(CART[idx].qty === 0) CART.splice(idx,1); saveCart(); renderCart(); }
+function removeItem(idx){ CART.splice(idx,1); saveCart(); renderCart(); }
+function toggleCart(){ const panel = el('#cartPanel'); panel.classList.toggle('open'); }
+function openCart(){ el('#cartPanel').classList.add('open'); }
+function addFromCard(btn){ const card = btn.closest('.product'); const id = card.dataset.id; const p = PRODUCTS.find(x=>x.id===id); const qty = Math.max(1, parseInt(card.querySelector('.quick-qty').value||1,10)); const img = card.querySelector('.thumbs img')?.dataset?.src || card.querySelector('.thumbs img')?.src; addToCart({id:p.id,name:p.name,price:p.price,qty,img}); }
+function flashCart(){ el('#cartButton').animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:300}); }
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ---------- shipping logic ---------- */
+function getShippingFee(zone){
+  if(zone === 'dakar') return 500;
+  if(zone === 'pikine') return 800;
+  if(zone === 'thies') return 1500;
+  if(zone === 'retirer') return 0;
+  return 2000; // default for other regions
+}
+
+/* ---------- checkout flows (whatsapp + payments) ---------- */
+function checkoutViaWhatsApp(){
+  if(CART.length===0){ alert('Le panier est vide'); return; }
+  const zone = el('#deliveryZone')?.value || 'dakar'; const shipping = getShippingFee(zone);
+  let total = 0; let msg = 'Bonjour,%0AJ’aimerais commander :%0A';
+  CART.forEach(it=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; const ln=base-disc; msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`; total += ln; });
+  total += shipping;
+  msg += `Frais livraison (${zone}): ${shipping} CFA%0A`;
+  msg += `Total : ${total.toLocaleString()} CFA%0A%0ANom : %0ATéléphone :%0AAdresse :`;
+  // create order record (status: 'pending')
+  const orderId = 'ORD' + Date.now();
+  ORDERS.push({ id:orderId, items:CART, shippingZone:zone, shippingFee:shipping, total, status:'pending', createdAt:Date.now(), buyer:null });
+  write(KEY_ORDERS, ORDERS);
+  // open whatsapp
+  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(decodeURIComponent(msg))}`;
+  window.open(url, '_blank');
+  showToast('🔔 Commande prête — confirmez via WhatsApp');
+}
+
+function openPayModal(method){
+  if(CART.length===0){ alert('Le panier est vide'); return; }
+  const total = CART.reduce((s,it)=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; return s + (base - disc); },0) + getShippingFee(el('#deliveryZone')?.value || 'dakar');
+  const number = method === 'wave' ? WAVE : ORANGE;
+  const label = method === 'wave' ? 'Wave (Promobile)' : 'Orange Money';
+  const qrText = `${label} ${number} Montant:${total}CFA`;
+  const qrUrl = `https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=${encodeURIComponent(qrText)}`;
+  const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `<div class="modal" role="dialog" aria-modal="true"><div style="flex:1"><h3>${label}</h3><div class="small">Numéro : <strong>${number}</strong></div><div class="small">Montant : <strong>${total.toLocaleString()} CFA</strong></div><div style="margin-top:10px" class="small">Scannez le QR pour effectuer le paiement ou payez manuellement puis cliquez sur "J'ai payé" pour confirmer.</div><div style="margin-top:12px"><img src="${qrUrl}" alt="QR Code" style="max-width:220px;border:6px solid #fff;border-radius:10px"></div><label>Référence paiement (ex: transaction ID)</label><input type="text" id="payRef" placeholder="Ex: REF12345" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px"></div><div style="width:220px;display:flex;flex-direction:column;gap:8px;align-items:center"><button class="add-btn" id="paidConfirm">J'ai payé — Confirmer</button><button class="secondary-btn" id="payClose">Fermer</button></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#payClose').addEventListener('click', ()=> back.remove());
+  back.querySelector('#paidConfirm').addEventListener('click', ()=>{
+    const ref = back.querySelector('#payRef').value.trim();
+    // record order as 'paid' with paymentRef
+    const orderId = 'ORD' + Date.now();
+    const shippingZone = el('#deliveryZone')?.value || 'dakar'; const shipping = getShippingFee(shippingZone);
+    const order = { id: orderId, items: CART, shippingZone, shippingFee: shipping, total, status: 'paid', paymentMethod: label, paymentRef: ref, createdAt: Date.now() };
+    ORDERS.push(order); write(KEY_ORDERS, ORDERS);
+    // open whatsapp prefilled confirmation message
+    let msg = `Bonjour, j'ai effectué un paiement de ${total.toLocaleString()} CFA via ${label} (${number}).%0ARéférence: ${encodeURIComponent(ref)}%0ACommande:%0A`;
+    order.items.forEach(it=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; const ln=base-disc; msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`; });
+    msg += `Frais livraison: ${shipping} CFA%0ATotal : ${total.toLocaleString()} CFA%0A%0ANom :%0ATéléphone :%0AAdresse :`;
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(decodeURIComponent(msg))}`, '_blank');
+    showToast('✅ Paiement confirmé — commande enregistrée');
+    // clear cart
+    CART = []; write(KEY_CART, CART); renderCart();
+    back.remove();
+  });
+}
+
+/* ---------- draggable cart button & panel ---------- */
+(function draggable(){
+  const btn = el('#cartButton'); const panel = el('#cartPanel'); const handle = el('#cartHandle');
+  const savedBtn = JSON.parse(localStorage.getItem('cartBtnPos')||'null');
+  if(savedBtn){ btn.style.left = savedBtn.x + 'px'; btn.style.top = savedBtn.y + 'px'; btn.style.right='auto'; btn.style.bottom='auto'; btn.style.position='fixed'; }
+  const savedPanel = JSON.parse(localStorage.getItem('cartPanelPos')||'null');
+  if(savedPanel){ panel.style.left = savedPanel.x + 'px'; panel.style.top = savedPanel.y + 'px'; panel.style.right='auto'; panel.style.bottom='auto'; panel.style.position='fixed'; }
+  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
+  btn.addEventListener('pointerdown', startBtn);
+  function startBtn(e){
+    e.preventDefault(); btn.setPointerCapture(e.pointerId);
+    const rect = btn.getBoundingClientRect(); const startX = e.clientX; const startY = e.clientY; const offsetX = startX - rect.left; const offsetY = startY - rect.top;
+    function onMove(ev){ ev.preventDefault(); let x = ev.clientX - offsetX; let y = ev.clientY - offsetY; const vw = Math.max(document.documentElement.clientWidth, window.innerWidth||0); const vh = Math.max(document.documentElement.clientHeight, window.innerHeight||0); x = clamp(x,6,vw-rect.width-6); y = clamp(y,6,vh-rect.height-6); btn.style.left = x + 'px'; btn.style.top = y + 'px'; btn.style.right='auto'; btn.style.bottom='auto'; btn.style.position='fixed'; }
+    function end(ev){ btn.releasePointerCapture(e.pointerId); document.removeEventListener('pointermove', onMove); document.removeEventListener('pointerup', end); const left = parseInt(btn.style.left||btn.getBoundingClientRect().left,10); const top = parseInt(btn.style.top||btn.getBoundingClientRect().top,10); localStorage.setItem('cartBtnPos',JSON.stringify({x:left,y:top})); }
+    document.addEventListener('pointermove', onMove); document.addEventListener('pointerup', end);
+  }
+  let down=null;
+  btn.addEventListener('pointerdown',(e)=> down={x:e.clientX,y:e.clientY,t:Date.now()});
+  btn.addEventListener('pointerup',(e)=>{ if(!down) return; const dx=Math.abs(e.clientX-down.x), dy=Math.abs(e.clientY-down.y), dt=Date.now()-down.t; down=null; if(dx<6 && dy<6 && dt<300) toggleCart(); });
+
+  handle.addEventListener('pointerdown', startPanel);
+  function startPanel(e){
+    e.preventDefault(); handle.setPointerCapture(e.pointerId);
+    const rect = panel.getBoundingClientRect(); const startX = e.clientX; const startY = e.clientY; const offsetX = startX - rect.left; const offsetY = startY - rect.top;
+    function onMove(ev){ ev.preventDefault(); let x = ev.clientX - offsetX; let y = ev.clientY - offsetY; const vw = Math.max(document.documentElement.clientWidth, window.innerWidth||0); const vh = Math.max(document.documentElement.clientHeight, window.innerHeight||0); x = clamp(x,6,vw-rect.width-6); y = clamp(y,6,vh-rect.height-6); panel.style.left = x + 'px'; panel.style.top = y + 'px'; panel.style.right='auto'; panel.style.bottom='auto'; panel.style.position='fixed'; }
+    function end(ev){ handle.releasePointerCapture(e.pointerId); document.removeEventListener('pointermove', onMove); document.removeEventListener('pointerup', end); const left = parseInt(panel.style.left||panel.getBoundingClientRect().left,10); const top = parseInt(panel.style.top||panel.getBoundingClientRect().top,10); localStorage.setItem('cartPanelPos',JSON.stringify({x:left,y:top})); }
+    document.addEventListener('pointermove', onMove); document.addEventListener('pointerup', end);
+  }
+  handle.addEventListener('dblclick', ()=>{ localStorage.removeItem('cartPanelPos'); panel.style.left='auto'; panel.style.top='auto'; panel.style.right='18px'; panel.style.bottom='92px'; panel.style.position='fixed'; });
+})();
+
+/* ---------- Auth (client-side) ---------- */
+function openAuthModal(){
+  const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `<div class="modal" role="dialog" aria-modal="true" style="max-width:720px"><div style="flex:1;padding-right:6px"><h3>Connexion / Inscription</h3><p class="small">Créez un compte client (stocké localement).</p><div style="display:flex;gap:8px;margin-top:8px"><button class="add-btn" id="switchLogin">Se connecter</button><button class="secondary-btn" id="switchRegister">S'inscrire</button></div><div id="authForm" style="margin-top:12px"></div></div><div style="width:260px;display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:100%;height:180px;background:linear-gradient(180deg,var(--gold-1),var(--gold-2));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#07100a;font-weight:800">SN-Élégance</div><button class="secondary-btn" id="closeAuth">Fermer</button></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  const authForm = back.querySelector('#authForm');
+  back.querySelector('#closeAuth').addEventListener('click', ()=> back.remove());
+  back.querySelector('#switchLogin').addEventListener('click', ()=> renderLogin());
+  back.querySelector('#switchRegister').addEventListener('click', ()=> renderRegister());
+  function renderLogin(){
+    authForm.innerHTML = `<label>Email ou téléphone</label><input id="ln" placeholder="email@example.com ou +221..." /><label>Mot de passe</label><input id="lp" type="password" placeholder="mot de passe" /><div style="margin-top:8px"><button class="add-btn" id="doLogin">Connexion</button></div>`;
+    authForm.querySelector('#doLogin').addEventListener('click', ()=>{
+      const ln = authForm.querySelector('#ln').value.trim(); const lp = authForm.querySelector('#lp').value.trim();
+      if(!ln || !lp){ alert('Remplissez tous les champs'); return; }
+      const user = USERS.find(u => u.email===ln || u.phone===ln);
+      if(!user || user.password !== lp){ alert('Utilisateur introuvable ou mot de passe incorrect'); return; }
+      localStorage.setItem('sn_logged_user', user.id); showToast('✅ Connecté'); back.remove(); renderUserArea();
     });
   }
-  renderProducts();
-
-  /* Recommendations */
-  function renderRecommendations(){
-    const rec = el('#recommendGrid'); rec.innerHTML = '';
-    PRODUCTS.slice(0,4).forEach(p=>{
-      const box = document.createElement('div');
-      box.style.minWidth='180px'; box.style.background='linear-gradient(180deg,#0f0f10,#0b0b0b)'; box.style.borderRadius='10px'; box.style.padding='8px'; box.style.border='1px solid rgba(255,255,255,0.04)'; box.style.boxShadow='var(--shadow)';
-      box.innerHTML = `<img src="${p.images[0]}" style="width:160px;height:100px;object-fit:cover;border-radius:8px"><div style="font-weight:800;margin-top:6px;color:var(--gold-2)">${p.name}</div><div style="color:var(--muted);font-size:13px">${p.price.toLocaleString()} CFA / m</div>`;
-      box.addEventListener('click', ()=> { const target = document.querySelector(`.product[data-id="${p.id}"]`); target?.scrollIntoView({behavior:'smooth', block:'center'}); target?.querySelector('.main-photo')?.click(); });
-      rec.appendChild(box);
+  function renderRegister(){
+    authForm.innerHTML = `<label>Nom</label><input id="rn" placeholder="Votre nom" /><label>Email</label><input id="re" placeholder="email@example.com" /><label>Téléphone</label><input id="rp" placeholder="+221..." /><label>Mot de passe</label><input id="rpass" type="password" placeholder="mot de passe" /><div style="margin-top:8px"><button class="add-btn" id="doRegister">S'inscrire</button></div>`;
+    authForm.querySelector('#doRegister').addEventListener('click', ()=>{
+      const name = authForm.querySelector('#rn').value.trim(); const email = authForm.querySelector('#re').value.trim(); const phone = authForm.querySelector('#rp').value.trim(); const pwd = authForm.querySelector('#rpass').value.trim();
+      if(!name || !email || !phone || !pwd){ alert('Remplissez tous les champs'); return; }
+      if(USERS.find(u=>u.email===email || u.phone===phone)){ alert('Utilisateur déjà existant'); return; }
+      const id = 'u_' + Date.now();
+      const user = { id, name, email, phone, password: pwd, createdAt: Date.now() };
+      USERS.push(user); write(KEY_USERS, USERS); localStorage.setItem('sn_logged_user', id); showToast('✅ Compte créé'); back.remove(); renderUserArea();
     });
   }
-  renderRecommendations()
-     Search & filter
-  let CURRENT_LIST = PRODUCTS.slice();
-  function applySearch(){ const q = el('#searchInput').value.trim().toLowerCase(); CURRENT_LIST = PRODUCTS.slice(); if(q) CURRENT_LIST = CURRENT_LIST.filter(p => (p.name + ' ' + p.desc).toLowerCase().includes(q)); applySort(); renderProducts(CURRENT_LIST); }
-  function filterByCategory(cat){ if(cat==='all') CURRENT_LIST=PRODUCTS.slice(); else CURRENT_LIST = PRODUCTS.filter(p=>p.category === cat); elAll('.category-chip').forEach(ch => ch.style.background = ch.dataset.cat === cat ? 'rgba(230,191,82,0.12)' : 'transparent'); applySort(); renderProducts(CURRENT_LIST); }
-  function applySort(){ const s = el('#sortSelect').value; if(s==='price-asc') CURRENT_LIST.sort((a,b)=>a.price-b.price); else if(s==='price-desc') CURRENT_LIST.sort((a,b)=>b.price-a.price); else if(s==='name-asc') CURRENT_LIST.sort((a,b)=>a.name.localeCompare(b.name)); else CURRENT_LIST.sort((a,b)=>b.rating-a.rating); renderProducts(CURRENT_LIST); }
-  function applyFilters(){ applySort(); }
+  renderLogin();
+  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
+}
 
-     Lightbox & buy modal
-  function openImageLightbox(src){
-    const back = document.createElement('div'); back.className='modal-back';
-    back.innerHTML = `<div class="modal" style="max-width:900px;flex-direction:column"><img src="${src}" style="max-width:100%;border-radius:8px"><div style="margin-top:8px;text-align:right"><button class="secondary-btn" onclick="this.closest('.modal-back').remove()">Fermer</button></div></div>`;
-    document.getElementById('modals').appendChild(back); back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
-  }
+function getCurrentUser(){ const id = localStorage.getItem('sn_logged_user'); if(!id) return null; return USERS.find(u=>u.id===id) || null; }
 
-  function openBuyModal(imgOrEl){
-    const imgEl = imgOrEl; const card = imgEl.closest('.product'); const id = card.dataset.id; const product = PRODUCTS.find(p=>p.id===id); if(!product) return;
-    const mainSrc = imgEl.dataset?.src || imgEl.src;
-    const back = document.createElement('div'); back.className='modal-back';
-    back.innerHTML = `<div class="modal" role="dialog" aria-modal="true"><div class="left"><img src="${mainSrc}" alt="${product.name}"><div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">${product.images.map(s=>`<img src="${s}" style="width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="document.querySelector('.modal img').src='${s}'">`).join('')}</div></div><div class="right"><h3>${product.name}</h3><div class="small">${product.desc}</div><div style="margin-top:8px" class="small">Prix : <strong>${money(product.price)}</strong> / mètre</div><label>Quantité (mètres)</label><input type="number" id="modalQty" min="1" value="1"><label>Nom (optionel)</label><input type="text" id="modalName" placeholder="Votre nom"><label>Téléphone (optionel)</label><input type="text" id="modalPhone" placeholder="+221 ..."><label>Remarque (optionel)</label><input type="text" id="modalNotes" placeholder="Ex: livraison urgente"><div style="margin-top:10px" class="small">Total : <strong id="modalTotal">${money(product.price)}</strong></div><div style="margin-top:12px;display:flex;gap:8px"><button class="add-btn" id="modalAdd">Ajouter au panier</button><button class="secondary-btn" id="modalClose">Fermer</button></div></div></div>`;
-    document.getElementById('modals').appendChild(back);
-
-    const qtyInput = back.querySelector('#modalQty'); const totalEl = back.querySelector('#modalTotal'); const nameInput = back.querySelector('#modalName'); const phoneInput = back.querySelector('#modalPhone'); const notesInput = back.querySelector('#modalNotes');
-    const updateTotal = ()=> { const q = Math.max(1, parseInt(qtyInput.value||1,10)); const base = product.price*q; const discount = q>=5? Math.round(base*0.10):0; totalEl.textContent = money(base - discount); };
-    qtyInput.addEventListener('input', updateTotal);
-    back.querySelector('#modalClose').addEventListener('click', ()=> back.remove());
-    back.querySelector('#modalAdd').addEventListener('click', ()=>{
-      const q = Math.max(1, parseInt(qtyInput.value||1,10)); const nameVal = nameInput.value.trim(); const phoneVal = phoneInput.value.trim(); const notesVal = notesInput.value.trim();
-      addToCart({ id: product.id, name: product.name, price: product.price, qty: q, img: mainSrc, notes: notesVal, buyerName: nameVal, buyerPhone: phoneVal });
-      back.remove();
-    });
-    back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
-  }
-
-  function openBuyModalFromCard(btn){ const card = btn.closest('.product'); card.querySelector('.main-photo').clic
-     Cart logic
-  function addToCart(item){
-    const existing = CART.find(i=>i.id === item.id);
-    if(existing){ existing.qty += item.qty; if(item.notes) existing.notes = item.notes; if(item.buyerName) existing.buyerName = item.buyerName; if(item.buyerPhone) existing.buyerPhone = item.buyerPhone; }
-    else CART.push(item);
-    saveCart(); renderCart(); flashCartButton(); openCart();
-  }
-
-  function renderCart(){
-    const list = el('#cartList'); const totalEl = el('#cartTotal'); list.innerHTML = '';
-    if(CART.length === 0){ list.textContent = 'Le panier est vide'; el('#cartCount').textContent = '0'; totalEl.textContent = '0 CFA'; return; }
-    let grandTotal = 0;
-    CART.forEach((it, idx)=>{
-      const lineBase = it.price * it.qty; const lineDiscount = it.qty >=5 ? Math.round(lineBase*0.10):0; const lineTotal = lineBase - lineDiscount; grandTotal += lineTotal;
-      const row = document.createElement('div'); row.className='cart-item';
-      row.innerHTML = `<img src="${it.img}" alt="${it.name}"><div class="cart-mini-meta"><div style="font-weight:800">${it.name}</div><div class="small">${it.qty} m • ${money(it.price)} / m</div>${it.notes?`<div class="small">Remarque: ${escapeHtml(it.notes)}</div>`:''}${it.qty>=5?`<div style="color:green;font-weight:800" class="small">Remise 10% appliquée</div>`:''}</div><div style="text-align:right"><div style="font-weight:900">${money(lineTotal)}</div><div style="display:flex;gap:6px;margin-top:6px;justify-content:flex-end"><button class="secondary-btn" onclick="changeQty(${idx},1)">+</button><button class="secondary-btn" onclick="changeQty(${idx},-1)">−</button><button class="secondary-btn" onclick="removeItem(${idx})">Suppr</button></div></div>`;
-      list.appendChild(row);
-    });
-    totalEl.textContent = grandTotal.toLocaleString() + ' CFA'; el('#cartCount').textContent = CART.reduce((s,i)=>s+i.qty,0);
-  }
-
-  function changeQty(idx, delta){ if(!CART[idx]) return; CART[idx].qty = Math.max(0, CART[idx].qty + delta); if(CART[idx].qty === 0) CART.splice(idx,1); saveCart(); renderCart(); }
-  function removeItem(idx){ CART.splice(idx,1); saveCart(); renderCart(); }
-  function toggleCart(){ const panel = el('#cartPanel'); panel.classList.toggle('open'); }
-  function openCart(){ el('#cartPanel').classList.add('open'); }
-
-  function addFromCard(btn){ const card = btn.closest('.product'); const id = card.dataset.id; const product = PRODUCTS.find(p=>p.id===id); const qty = Math.max(1, parseInt(card.querySelector('.quick-qty').value||1,10)); const img = card.querySelector('.thumbs img').dataset.src || card.querySelector('.thumbs img').src; addToCart({id:product.id,name:product.name,price:product.price,qty,img}); }
-
-  function flashCartButton(){ el('#cartButton').animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:300}); }
-  function escapeHtml(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-  /* =========================
-     WhatsApp & Payments (Wave / Orange)
-     ========================= */
-  function openWhatsApp(){
-    if(CART.length===0){ alert('Le panier est vide.'); return; }
-    let total=0; let msg = 'Bonjour,%0AJ’aimerais commander :%0A';
-    CART.forEach(it=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; const ln = base-disc; msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`; if(it.notes) msg += `  Remarque: ${encodeURIComponent(it.notes)}%0A`; total += ln; });
-    msg += `Total : ${total.toLocaleString()} CFA%0A%0ANom : %0ATéléphone :%0AAdresse :`;
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(decodeURIComponent(msg))}`; window.open(url,'_blank');
-  }
-
-  function openPayModal(method){
-    if(CART.length===0){ alert('Le panier est vide.'); return; }
-    const total = CART.reduce((s,it)=>{ const base=it.price*it.qty; const discount = it.qty>=5?Math.round(base*0.10):0; return s + (base - discount); },0);
-    const number = method==='wave'?WAVE_NUMBER:ORANGE_NUMBER; const label = method==='wave'?'Wave (Promobile)':'Orange Money';
-    const qrText = `${label} ${number} Montant:${total}CFA`; const qrUrl = `https://chart.googleapis.com/chart?chs=260x260&cht=qr&chl=${encodeURIComponent(qrText)}`;
-    const back = document.createElement('div'); back.className='modal-back';
-    back.innerHTML = `<div class="modal" role="dialog"><div style="flex:1"><h3>${label}</h3><div class="small">Numéro : <strong>${number}</strong></div><div class="small">Montant : <strong>${total.toLocaleString()} CFA</strong></div><div style="margin-top:10px" class="small">Scannez le QR pour effectuer le paiement ou payez manuellement puis cliquez sur "J'ai payé" pour confirmer.</div><div style="margin-top:12px"><img src="${qrUrl}" alt="QR Code" style="max-width:220px;border:6px solid #fff;border-radius:10px"></div><label>Référence paiement (ex: transaction ID)</label><input type="text" id="payRef" placeholder="Ex: REF12345" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px"></div><div style="width:220px;display:flex;flex-direction:column;gap:8px;align-items:center"><button class="add-btn" id="paidConfirm">J'ai payé — Confirmer</button><button class="secondary-btn" id="payClose">Fermer</button></div></div>`;
-    document.getElementById('modals').appendChild(back);
-    back.querySelector('#payClose').addEventListener('click', ()=> back.remove());
-    back.querySelector('#paidConfirm').addEventListener('click', ()=>{
-      const ref = back.querySelector('#payRef').value.trim();
-      let msg = `Bonjour, j'ai effectué un paiement de ${total.toLocaleString()} CFA via ${label} (${number}).%0ARéférence: ${encodeURIComponent(ref)}%0ACommande:%0A`;
-      CART.forEach(it => { const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; const ln = base-disc; msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`; });
-      msg += `Total : ${total.toLocaleString()} CFA%0A%0ANom :%0ATéléphone :%0AAdresse :`;
-      const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(decodeURIComponent(msg))}`; window.open(wa,'_blank'); back.remove();
+function renderUserArea(){
+  const user = getCurrentUser();
+  if(!user) return;
+  // show simple user modal with order history
+  const back = document.createElement('div'); back.className='modal-back';
+  const userOrders = ORDERS.filter(o => o.buyer && o.buyer.id === user.id) || [];
+  back.innerHTML = `<div class="modal" role="dialog" aria-modal="true" style="max-width:720px"><div style="flex:1;padding-right:6px"><h3>Mon compte — ${escapeHtml(user.name)}</h3><div class="small">Email: ${escapeHtml(user.email)} • Téléphone: ${escapeHtml(user.phone)}</div><div style="margin-top:12px"><strong>Historique des commandes</strong><div id="userOrdersArea" style="margin-top:8px"></div></div></div><div style="width:260px;display:flex;flex-direction:column;gap:8px;align-items:center"><button class="secondary-btn" id="logoutBtn">Se déconnecter</button><button class="secondary-btn" id="closeUser">Fermer</button></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#logoutBtn').addEventListener('click', ()=>{ localStorage.removeItem('sn_logged_user'); showToast('✅ Déconnecté'); back.remove(); });
+  back.querySelector('#closeUser').addEventListener('click', ()=> back.remove());
+  // fill orders
+  const container = back.querySelector('#userOrdersArea');
+  if(userOrders.length===0) container.innerHTML = '<div class="small">Aucune commande trouvée</div>';
+  else {
+    userOrders.forEach(o=>{
+      const d = document.createElement('div'); d.style.border='1px solid rgba(0,0,0,0.06)'; d.style.padding='8px'; d.style.borderRadius='8px'; d.style.marginBottom='8px';
+      d.innerHTML = `<div style="font-weight:800">#${o.id} — ${new Date(o.createdAt).toLocaleString()}</div><div class="small">Statut: ${o.status}</div><div class="small">Total: ${money(o.total)}</div>`;
+      container.appendChild(d);
     });
   }
+  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
+}
 
-  /* =========================
-     Draggable behavior (button + panel), positions saved in localStorage
-     ========================= */
-  (function makeDraggable(){
-    const btn = el('#cartButton'); const panel = el('#cartPanel'); const handle = el('#cartHandle');
+/* ---------- Seller panel (admin local) ---------- */
+function openSellerPanel(){
+  const authed = localStorage.getItem(KEY_SELLER_AUTH) === 'true';
+  if(!authed){
+    const pass = prompt('Accès vendeur — mot de passe :');
+    if(pass !== SELLER_PASS){ alert('Mot de passe incorrect'); return; }
+    localStorage.setItem(KEY_SELLER_AUTH, 'true');
+  }
+  renderSellerPanel(); el('#sellerPanel').classList.add('open');
+}
+function closeSellerPanel(){ el('#sellerPanel').classList.remove('open'); }
 
-    // load saved positions
-    const savedBtn = JSON.parse(localStorage.getItem('cartBtnPos')||'null');
-    if(savedBtn){ btn.style.left = savedBtn.x + 'px'; btn.style.top = savedBtn.y + 'px'; btn.style.right='auto'; btn.style.bottom='auto'; btn.style.position='fixed'; }
-    const savedPanel = JSON.parse(localStorage.getItem('cartPanelPos')||'null');
-    if(savedPanel){ panel.style.left = savedPanel.x + 'px'; panel.style.top = savedPanel.y + 'px'; panel.style.right='auto'; panel.style.bottom='auto'; panel.style.position='fixed'; }
+function renderSellerPanel(){
+  const list = el('#sellerList'); list.innerHTML = '';
+  PRODUCTS.forEach((p, idx)=>{
+    const row = document.createElement('div'); row.style.border='1px solid rgba(255,255,255,0.03)'; row.style.padding='8px'; row.style.borderRadius='8px'; row.style.marginBottom='8px';
+    row.innerHTML = `<div style="display:flex;gap:8px;align-items:center"><img src="${p.images[0]}" style="width:64px;height:64px;object-fit:cover;border-radius:6px"><div style="flex:1"><div style="font-weight:800">${p.name}</div><div class="small">${p.price.toLocaleString()} CFA / m</div><div class="small" style="color:var(--muted)">${p.category}</div></div><div style="display:flex;flex-direction:column;gap:6px"><button class="btn-ghost" onclick="editProduct(${idx})">Modifier</button><button class="btn-ghost" onclick="deleteProduct(${idx})">Suppr</button></div></div>`;
+    list.appendChild(row);
+  });
+  // orders
+  const ordList = el('#ordersList'); ordList.innerHTML = '';
+  if(ORDERS.length===0) ordList.textContent = 'Aucune commande';
+  else {
+    ORDERS.slice().reverse().forEach(o=>{
+      const r = document.createElement('div'); r.style.border='1px solid rgba(255,255,255,0.03)'; r.style.padding='8px'; r.style.borderRadius='8px'; r.style.marginBottom='8px';
+      r.innerHTML = `<div style="display:flex;justify-content:space-between"><div style="font-weight:800">${o.id}</div><div class="small">${new Date(o.createdAt).toLocaleString()}</div></div><div class="small">Total: ${money(o.total)} • Statut: ${o.status}</div><div style="margin-top:6px;display:flex;gap:6px"><button class="btn-ghost" onclick="markAs(${o.id},'preparation')">En préparation</button><button class="btn-ghost" onclick="markAs('${o.id}','delivered')">Livré</button></div>`;
+      ordList.appendChild(r);
+    });
+  }
+}
 
-    function clamp(v,min,max){ return Math.max(min,Math.min(max,v)); }
+function markAs(id, status){
+  const o = ORDERS.find(x=>x.id===id);
+  if(!o) return; o.status = status; write(KEY_ORDERS, ORDERS); renderSellerPanel(); showToast('✅ Statut mis à jour');
+}
 
-    // BUTTON drag
-    btn.addEventListener('pointerdown', startBtn);
-    function startBtn(e){
-      e.preventDefault(); btn.setPointerCapture(e.pointerId);
-      const rect = btn.getBoundingClientRect(); const startX = e.clientX; const startY = e.clientY; const offsetX = startX - rect.left; const offsetY = startY - rect.top;
-      function onMove(ev){ ev.preventDefault(); let x = ev.clientX - offsetX; let y = ev.clientY - offsetY; const vw = Math.max(document.documentElement.clientWidth, window.innerWidth||0); const vh = Math.max(document.documentElement.clientHeight, window.innerHeight||0); x = clamp(x,6,vw-rect.width-6); y = clamp(y,6,vh-rect.height-6); btn.style.left = x + 'px'; btn.style.top = y + 'px'; btn.style.right='auto'; btn.style.bottom='auto'; btn.style.position='fixed'; }
-      function end(ev){ btn.releasePointerCapture(e.pointerId); document.removeEventListener('pointermove', onMove); document.removeEventListener('pointerup', end); const left = parseInt(btn.style.left||btn.getBoundingClientRect().left,10); const top = parseInt(btn.style.top||btn.getBoundingClientRect().top,10); localStorage.setItem('cartBtnPos',JSON.stringify({x:left,y:top})); }
-      document.addEventListener('pointermove', onMove); document.addEventListener('pointerup', end);
-    }
+function deleteProduct(idx){ if(!confirm('Supprimer ce produit ?')) return; PRODUCTS.splice(idx,1); write(KEY_PRODUCTS, PRODUCTS); renderProducts(PRODUCTS); renderRecommendations(); renderSellerPanel(); showToast('✅ Produit supprimé'); }
+function editProduct(idx){
+  const p = PRODUCTS[idx]; const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `<div class="modal"><div style="flex:1"><h3>Modifier produit</h3><div class="form-row"><label>Nom</label><input id="ep_name" value="${escapeHtml(p.name)}"></div><div class="form-row"><label>Prix</label><input id="ep_price" value="${p.price}"></div><div class="form-row"><label>Catégorie</label><input id="ep_cat" value="${p.category}"></div><div class="form-row"><label>Description</label><textarea id="ep_desc">${escapeHtml(p.desc)}</textarea></div><div class="form-row"><label>Images (séparées par ,)</label><textarea id="ep_imgs">${p.images.join(',')}</textarea></div><div style="display:flex;gap:8px;margin-top:8px"><button class="add-btn" id="saveEdit">Enregistrer</button><button class="secondary-btn" id="cancelEdit">Annuler</button></div></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#cancelEdit').addEventListener('click', ()=> back.remove());
+  back.querySelector('#saveEdit').addEventListener('click', ()=> {
+    const name = back.querySelector('#ep_name').value.trim(); const price = Number(back.querySelector('#ep_price').value||0); const cat = back.querySelector('#ep_cat').value.trim(); const desc = back.querySelector('#ep_desc').value.trim(); const imgs = back.querySelector('#ep_imgs').value.split(',').map(s=>s.trim()).filter(Boolean);
+    if(!name||!price||imgs.length===0){ alert('Nom, prix et au moins 1 image requis'); return; }
+    PRODUCTS[idx] = {...PRODUCTS[idx], name, price, category:cat, desc, images: imgs}; write(KEY_PRODUCTS, PRODUCTS); renderProducts(PRODUCTS); renderRecommendations(); renderSellerPanel(); back.remove(); showToast('✅ Produit modifié');
+  });
+  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
+}
 
-    // detect tap vs drag for button
-    let btnDown = null;
-    btn.addEventListener('pointerdown', (e)=> btnDown = {x:e.clientX,y:e.clientY,t:Date.now()});
-    btn.addEventListener('pointerup', (e)=>{ if(!btnDown) return; const dx=Math.abs(e.clientX-btnDown.x), dy=Math.abs(e.clientY-btnDown.y), dt=Date.now()-btnDown.t; btnDown=null; if(dx<6 && dy<6 && dt<300) toggleCart(); });
+function newProductFlow(){
+  const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `<div class="modal"><div style="flex:1"><h3>Nouveau produit</h3><div class="form-row"><label>ID</label><input id="np_id" placeholder="ex: magnum2"></div><div class="form-row"><label>Nom</label><input id="np_name" placeholder="Nom"></div><div class="form-row"><label>Prix</label><input id="np_price" placeholder="11000"></div><div class="form-row"><label>Catégorie</label><input id="np_cat" placeholder="magnum"></div><div class="form-row"><label>Description</label><textarea id="np_desc"></textarea></div><div class="form-row"><label>Images (séparées par ,)</label><textarea id="np_imgs"></textarea></div><div style="display:flex;gap:8px;margin-top:8px"><button class="add-btn" id="createProd">Créer</button><button class="secondary-btn" id="cancelCreate">Annuler</button></div></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#cancelCreate').addEventListener('click', ()=> back.remove());
+  back.querySelector('#createProd').addEventListener('click', ()=>{
+    const id = back.querySelector('#np_id').value.trim() || ('p_'+Date.now()); const name = back.querySelector('#np_name').value.trim(); const price = Number(back.querySelector('#np_price').value||0); const cat = back.querySelector('#np_cat').value.trim(); const desc = back.querySelector('#np_desc').value.trim(); const imgs = back.querySelector('#np_imgs').value.split(',').map(s=>s.trim()).filter(Boolean);
+    if(!name||!price||imgs.length===0){ alert('Nom, prix, 1 image requis'); return; }
+    PRODUCTS.push({ id, name, price, category:cat||'autre', desc, images: imgs, rating:4.5, reviews:0 }); write(KEY_PRODUCTS, PRODUCTS); renderProducts(PRODUCTS); renderRecommendations(); renderSellerPanel(); back.remove(); showToast('✅ Produit ajouté');
+  });
+  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
+}
 
-    // PANEL drag via handle
-    handle.addEventListener('pointerdown', startPanel);
-    function startPanel(e){
-      e.preventDefault(); handle.setPointerCapture(e.pointerId);
-      const rect = panel.getBoundingClientRect(); const startX = e.clientX; const startY = e.clientY; const offsetX = startX - rect.left; const offsetY = startY - rect.top;
-      function onMove(ev){ ev.preventDefault(); let x = ev.clientX - offsetX; let y = ev.clientY - offsetY; const vw = Math.max(document.documentElement.clientWidth, window.innerWidth||0); const vh = Math.max(document.documentElement.clientHeight, window.innerHeight||0); x = clamp(x,6,vw-rect.width-6); y = clamp(y,6,vh-rect.height-6); panel.style.left = x + 'px'; panel.style.top = y + 'px'; panel.style.right='auto'; panel.style.bottom='auto'; panel.style.position='fixed'; }
-      function end(ev){ handle.releasePointerCapture(e.pointerId); document.removeEventListener('pointermove', onMove); document.removeEventListener('pointerup', end); const left = parseInt(panel.style.left||panel.getBoundingClientRect().left,10); const top = parseInt(panel.style.top||panel.getBoundingClientRect().top,10); localStorage.setItem('cartPanelPos',JSON.stringify({x:left,y:top})); }
-      document.addEventListener('pointermove', onMove); document.addEventListener('pointerup', end);
-    }
+/* export/import */
+function exportProducts(){ const data = JSON.stringify(PRODUCTS, null, 2); const blob = new Blob([data], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='sn_products_export.json'; a.click(); URL.revokeObjectURL(url); }
+function exportOrdersCSV(){
+  if(ORDERS.length===0){ alert('Aucune commande à exporter'); return; }
+  const rows = [['orderId','createdAt','status','total','shippingZone','paymentMethod']];
+  ORDERS.forEach(o=> rows.push([o.id, new Date(o.createdAt).toISOString(), o.status, o.total, o.shippingZone||'', o.paymentMethod||'']));
+  const csv = rows.map(r=> r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='sn_orders_export.csv'; a.click(); URL.revokeObjectURL(url);
+}
 
-    // reset panel position on double click
-    handle.addEventListener('dblclick', ()=>{ localStorage.removeItem('cartPanelPos'); panel.style.left='auto'; panel.style.top='auto'; panel.style.right='18px'; panel.style.bottom='92px'; panel.style.position='fixed'; });
-  })();
+/* ---------- chatbot (simple) ---------- */
+function openChat(){
+  const back = document.createElement('div'); back.className='modal-back';
+  back.innerHTML = `<div class="modal" style="max-width:520px;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Assistant SN-Élégance</h3><button class="secondary-btn" id="closeChat">Fermer</button></div><div id="chatArea" style="height:320px;overflow:auto;border:1px solid #eee;padding:8px;border-radius:8px;background:#fafafa;margin-top:8px"></div><div style="display:flex;gap:8px;margin-top:8px"><input id="chatInput" placeholder="Ex: Je veux 5m de Magnum" style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd"><button class="add-btn" id="sendChat">Envoyer</button></div></div>`;
+  document.getElementById('modals').appendChild(back);
+  back.querySelector('#closeChat').addEventListener('click', ()=> back.remove());
+  const chatArea = back.querySelector('#chatArea'); const input = back.querySelector('#chatInput');
+  function botReply(q){
+    q = q.toLowerCase();
+    if(q.includes('magnum')) return 'Le Magnum est à 11 000 CFA / m. Souhaitez-vous ajouter au panier ?';
+    if(q.includes('brocade')) return 'Le Brocade est à 13 000 CFA / m — motifs très raffinés.';
+    if(q.includes('wifi')) return 'Wifi: 13 000 CFA / m, léger et moderne.';
+    if(q.includes('focus')) return 'Focus: 14 000 CFA / m, pour tenues sobres et élégantes.';
+    if(q.includes('livraison')) return 'Nous livrons à Dakar, Pikine, Thiès. Frais variables — choisis la zone lors du checkout.';
+    if(q.includes('paiement')) return 'Wave & Orange Money acceptés. Paiement via QR dans le panier.';
+    return 'Bonjour 👋 — je peux vous aider à choisir un tissu ou préparer une commande. Tapez le nom du tissu ou "commande".';
+  }
+  back.querySelector('#sendChat').addEventListener('click', ()=>{
+    const q = input.value.trim(); if(!q) return;
+    const userDiv = document.createElement('div'); userDiv.style.textAlign='right'; userDiv.innerHTML = `<div style="display:inline-block;background:#07100a;color:#fff;padding:6px 8px;border-radius:8px;margin-bottom:6px">${escapeHtml(q)}</div>`; chatArea.appendChild(userDiv);
+    input.value=''; chatArea.scrollTop = chatArea.scrollHeight;
+    setTimeout(()=>{ const r = botReply(q); const botDiv = document.createElement('div'); botDiv.innerHTML = `<div style="display:inline-block;background:#fff;padding:6px 8px;border-radius:8px;margin-bottom:6px">${escapeHtml(r)}</div>`; chatArea.appendChild(botDiv); chatArea.scrollTop = chatArea.scrollHeight; }, 400);
+  });
+  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
+}
 
-  /* Cookie banner behaviour  AdSense */
-  if(localStorage.getItem('cookiesAccepted') === 'true'){ document.getElementById('cookie-banner').style.display='none'; }
-  document.getElementById('accept-cookies').addEventListener('click', function(){ localStorage.setItem('cookiesAccepted','true'); document.getElementById('cookie-banner').style.display='none'; /* optionally load analytics here if desired */ });
+/* ---------- newsletter ---------- */
+function subscribeNewsletter(){
+  const email = el('#newsletterEmail').value.trim();
+  if(!email || !email.includes('@')){ alert('Entrer un email valide'); return; }
+  if(NEWS.includes(email)){ showToast('Déjà inscrit'); return; }
+  NEWS.push(email); write(KEY_NEWS, NEWS); showToast('✅ Inscription confirmée');
+}
 
-  /* Init */
-  renderCart(); el('#searchInput').addEventListener('keydown',(e)=>{ if(e.key==='Enter') applySearch(); }); document.addEventListener('DOMContentLoaded', ()=>{ renderProducts(PRODUCTS); renderRecommendations(); renderCart(); });
-  </script>
+/* ---------- util & init ---------- */
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* UI bindings */
+el('#openAuthBtn').addEventListener('click', ()=> {
+  const u = getCurrentUser(); if(u) renderUserArea(); else openAuthModal();
+});
+el('#openSellerBtn').addEventListener('click', openSellerPanel);
+el('#closeSellerBtn').addEventListener('click', closeSellerPanel);
+el('#newProductBtn').addEventListener('click', newProductFlow);
+el('#exportBtn').addEventListener('click', exportProducts);
+el('#exportOrdersBtn').addEventListener('click', exportOrdersCSV);
+el('#importBtn').addEventListener('click', ()=> el('#importFile').click());
+el('#importFile').addEventListener('change', (e)=> { const f = e.target.files[0]; if(!f) return; const reader = new FileReader(); reader.onload = (ev)=>{ try{ const arr = JSON.parse(ev.target.result); if(!Array.isArray(arr)){ alert('Fichier invalide'); return; } PRODUCTS = arr; write(KEY_PRODUCTS, PRODUCTS); renderProducts(PRODUCTS); renderRecommendations(); renderSellerPanel(); showToast('✅ Import terminé'); } catch(err){ alert('Erreur import : ' + err.message); } }; reader.readAsText(f); e.target.value=''; });
+
+el('#openChatBtn').addEventListener('click', openChat);
+el('#cartButton').addEventListener('click', toggleCart);
+
+// cookie banner
+if(localStorage.getItem('cookiesAccepted') === 'true'){ document.getElementById('cookie-banner').style.display='none'; }
+el('#accept-cookies').addEventListener('click', ()=>{ localStorage.setItem('cookiesAccepted','true'); document.getElementById('cookie-banner').style.display='none'; });
+
+// search enter
+el('#searchInput').addEventListener('keydown', (e)=>{ if(e.key==='Enter') applySearch(); });
+
+// delivery change -> rerender cart
+el('#deliveryZone').addEventListener('change', ()=> renderCart());
+
+// initial render
+renderProducts(PRODUCTS); renderRecommendations(); renderCart();
+
+/* =========================
+   Small note: helpful dev functions in console:
+   - localStorage.clear() // reset everything (careful)
+   - write(KEY_PRODUCTS, newArray)
+   ========================= */
+
+</script>
 </body>
 </html>
+
