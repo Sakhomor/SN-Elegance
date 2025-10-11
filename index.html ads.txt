@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  google.com, pub-9469166621216194, DIRECT, f08c47fec0942fa0
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SN-Élégance 221 — Premium V2 (Statique + EADE)</title>
@@ -94,10 +95,6 @@
       .seller-panel{left:12px;top:80px;width:calc(100% - 24px)}
     }
   </style>
-
-  <!-- Google AdSense (laissé comme demandé) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
