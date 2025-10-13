@@ -2,13 +2,28 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SN-Élégance 221 — Premium V2 (Statique + EADE)</title>
-  <meta name="description" content="SN-Élégance 221 — Boutique premium de tissus Getzner. Achat au mètre, paiement Wave & Orange Money, commande via WhatsApp. Espace client & back-office vendeur (localStorage)." />
-  <meta name="theme-color" content="#0b0b0b">
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D17R52MVJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D17R52MVJF');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D17R52MVJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D17R52MVJF');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9469166621216194"
      crossorigin="anonymous"></script>
-  
+<meta name="google-adsense-account" content="ca-pub-9469166621216194">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SN-Élégance 221 — Premium V2 (IA)</title>
+  <meta name="description" content="SN-Élégance 221 — Boutique premium de tissus Getzner. Achat au mètre : Magnum, Brocade, Wifi, Focus. Paiement Wave & Orange Money. Chatbot IA bilingue FR/EN." />
+  <meta name="theme-color" content="#0b0b0b">
+
   <style>
     :root{
       --ivory:#F6F2EA; --gold-1:#C9A227; --gold-2:#E6BF52;
@@ -80,7 +95,14 @@
     .form-row{display:flex;gap:8px;flex-direction:column;margin-bottom:8px}
     .form-row input,.form-row textarea,.form-row select{padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);width:100%}
     .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);padding:8px;border-radius:8px;cursor:pointer}
-    .chatbot-btn{position:fixed;left:18px;bottom:18px;background:#25D366;color:#07100a;padding:12px;border-radius:999px;border:none;box-shadow:0 14px 36px rgba(0,0,0,0.2);z-index:170}
+    .chatbot-btn{position:fixed;right:92px;bottom:18px;background:linear-gradient(90deg,var(--gold-1),var(--gold-2));color:#07100a;padding:14px;border-radius:999px;border:none;box-shadow:0 16px 44px rgba(0,0,0,0.24);z-index:170;font-weight:900}
+    .chat-window{position:fixed;right:92px;bottom:92px;width:380px;max-height:78vh;background:linear-gradient(180deg,#fff,#f7f5f0);border-radius:12px;box-shadow:0 40px 120px rgba(0,0,0,0.24);z-index:200;display:none;flex-direction:column;overflow:hidden}
+    .chat-window.open{display:flex}
+    .chat-header{background:linear-gradient(90deg,var(--gold-1),var(--gold-2));padding:12px;color:#07100a;font-weight:900;display:flex;align-items:center;gap:8px}
+    .chat-body{padding:10px;overflow:auto;flex:1;background:linear-gradient(180deg,#fff,#fcfbf8)}
+    .chat-input{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(0,0,0,0.04);background:white}
+    .msg-user{align-self:flex-end;background:#07100a;color:#fff;padding:8px 10px;border-radius:10px;margin:6px 0;max-width:84%}
+    .msg-bot{align-self:flex-start;background:#fff;border:1px solid rgba(0,0,0,0.06);padding:8px 10px;border-radius:10px;margin:6px 0;max-width:84%}
     @media(max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr)} .cart-panel{right:12px;width:360px} .seller-panel{width:320px} }
     @media(max-width:700px){
       .grid{grid-template-columns:1fr}
@@ -92,18 +114,17 @@
       .cart-floating{width:56px;height:56px}
       .cart-panel{max-height:60vh}
       .seller-panel{left:12px;top:80px;width:calc(100% - 24px)}
+      .chat-window{right:12px;left:12px;width:auto;bottom:80px}
     }
   </style>
 </head>
 <body>
 
-  <!-- Cookie banner -->
   <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#111;color:#fff;padding:12px;text-align:center;z-index:1000;font-size:14px;">
     Ce site utilise des cookies pour améliorer votre expérience.
     <button id="accept-cookies" style="margin-left:10px;padding:6px 10px;background:#222;color:white;border:none;cursor:pointer;border-radius:6px;">Accepter</button>
   </div>
 
-  <!-- Header -->
   <header>
     <div class="header-inner">
       <img class="logo" src="https://i.postimg.cc/fWJvXsJ4/SN-Elegange.png" alt="SN-Élégance logo">
@@ -145,7 +166,6 @@
 
   <!-- Main -->
   <main>
-    <script>
     <section class="hero">
       <div class="hero-left">
         <h1>Collections Getzner — Qualité & élégance</h1>
@@ -174,7 +194,7 @@
     <section style="margin-top:18px;padding:14px;border-radius:10px;background:linear-gradient(90deg, rgba(201,162,39,0.06), rgba(0,108,103,0.02));">
       <strong>Newsletter</strong>
       <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
-        <input id="newsletterEmail" placeholder="Votre email" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+        <input id="newsletterEmail" placeholder="mamesakho34@gmail.com" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
         <button class="add-btn" onclick="subscribeNewsletter()">S'inscrire</button>
       </div>
     </section>
@@ -209,9 +229,9 @@
     <div style="margin-top:8px">
       <label class="small">Mode de livraison</label>
       <select id="deliveryZone" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:6px">
-        <option value="dakar">Dakar - 500 CFA</option>
-        <option value="pikine">Pikine - 800 CFA</option>
-        <option value="thies">Thiès - 1500 CFA</option>
+        <option value="dakar">Dakar - 2500 CFA</option>
+        <option value="pikine">Pikine - 1500 CFA</option>
+        <option value="thies">Thiès - 7000 CFA</option>
         <option value="region">Autre région (sur demande)</option>
         <option value="retirer">Retrait en boutique - Gratuit</option>
       </select>
@@ -254,8 +274,33 @@
     </div>
   </aside>
 
-  <!-- Chatbot button -->
-  <button class="chatbot-btn" id="openChatBtn" title="Aide / Chat">💬 Aide</button>
+  <!-- Chatbot luxueux -->
+  <button class="chatbot-btn" id="toggleChatBtn" title="Assistant SN-Élégance">💬 Aide</button>
+
+  <div class="chat-window" id="chatWindow" role="dialog" aria-modal="true">
+    <div class="chat-header">
+      <div style="display:flex;gap:10px;align-items:center">
+        <img src="https://i.postimg.cc/fWJvXsJ4/SN-Elegange.png" alt="logo" style="height:36px;border-radius:6px;background:white;padding:4px">
+        <div>
+          <div style="font-weight:900">SN-Élégance Assistant</div>
+          <div style="font-size:12px;color:#07100a">FR/EN • Paiement Wave / Orange</div>
+        </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <select id="chatLang" style="padding:6px;border-radius:8px;border:none;font-weight:800">
+          <option value="auto">Bilingue (FR/EN)</option>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+        </select>
+        <button class="secondary-btn" id="closeChatBtn">Fermer</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatBody" aria-live="polite"></div>
+    <div class="chat-input">
+      <input id="chatInputText" placeholder="Tapez votre message ici..." style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+      <button class="add-btn" id="sendChatBtn">Envoyer</button>
+    </div>
+  </div>
 
   <!-- Modals container -->
   <div id="modals"></div>
@@ -270,44 +315,43 @@
 
 <script>
 /* =========================
-   Premium V2 + EADE (statique)
-   - localStorage: products, cart, users, orders
-   - delivery zones and fees
-   - chatbot (simple), newsletter capture
-   - seller panel with export orders (CSV)
+   Premium V2 — Code complet intégrant chatbot IA (bilingue)
+   - CHANGE THIS: l'URL ci-dessous vers ton endpoint serverless (Vercel)
+   - Ne mets JAMAIS ta clé OpenAI dans le client.
    ========================= */
 
+// === CONFIG ===
+const CHAT_API_ENDPOINT = 'https://sn-elegance-chat.vercel.app/api/chat'; // <--- change if needed
+const WHATSAPP = '221754437491';
+const WAVE = '+221754437491';
+const ORANGE = '+221784324745';
+const SELLER_PASS = 'SNAdmin2025!'; // change locally if needed
+
+// === helpers / storage keys ===
 const KEY_PRODUCTS = 'sn_products_v2';
 const KEY_CART = 'sn_cart_v2';
 const KEY_USERS = 'sn_users_v2';
 const KEY_ORDERS = 'sn_orders_v2';
-const KEY_SELLER_AUTH = 'sn_seller_auth';
-const KEY_NEWS = 'sn_newsletter_v1';
+const KEY_NEWS = 'sn_news_v1';
 
-const WHATSAPP = '221754437491';
-const WAVE = '+221754437491';
-const ORANGE = '+221784324745';
-const SELLER_PASS = 'SNAdmin2025!'; // change locally if desired
-
-// helper
 const el = s => document.querySelector(s);
 const elAll = s => Array.from(document.querySelectorAll(s));
 const money = n => Number(n).toLocaleString() + ' CFA';
-const read = (k, fallback) => { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch(e){ return fallback; } };
+const read = (k, fallback) => { try{ return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch(e){ return fallback; } };
 const write = (k,v) => localStorage.setItem(k, JSON.stringify(v));
-const showToast = (t, ms=1500)=>{ const d = document.createElement('div'); d.className='toast'; d.textContent = t; document.getElementById('toastContainer').appendChild(d); setTimeout(()=>{ d.style.opacity=0; setTimeout(()=>d.remove(),320)}, ms); };
+const showToast = (t, ms=1600)=>{ const d = document.createElement('div'); d.className='toast'; d.textContent = t; document.getElementById('toastContainer').appendChild(d); setTimeout(()=>{ d.style.opacity=0; setTimeout(()=>d.remove(),320)}, ms); };
 
-// default dataset (only if not present)
+// === initial data ===
 let PRODUCTS = read(KEY_PRODUCTS, null);
 if(!PRODUCTS){
   PRODUCTS = [
-    { id:'magnum', name:'Getzner Magnum Gold', price:11000, desc:'Tissu de prestige, parfait pour boubous et cérémonies.', category:'magnum',
+    { id:'magnum', name:'Getzner Magnum Gold', price:11000, desc:'Le tissu Getzner Magnum Gold est reconnu pour sa qualité exceptionnelle et son éclat raffiné. Idéal pour boubous et tenues de fête.', category:'magnum',
       images:['https://i.postimg.cc/BQxHq1Wb/IMG-20250927-WA0060.jpg','https://i.postimg.cc/VL15WGTv/IMG-20250927-WA0074.jpg','https://i.postimg.cc/Wpm1zm3j/IMG-20250927-WA0066-1.jpg'], rating:4.7, reviews:24 },
-    { id:'brocade', name:'Getzner Brocade', price:13000, desc:'Brocade riche en motifs, idéal pour tenues traditionnelles.', category:'brocade',
+    { id:'brocade', name:'Getzner Brocade', price:13000, desc:'Le Brocade est un tissu élégant aux motifs tissés, parfait pour des tenues traditionnelles et cérémonies.', category:'brocade',
       images:['https://i.postimg.cc/5yz79NJk/IMG-20250927-WA0084.jpg','https://i.postimg.cc/L89TwVq2/IMG-20250927-WA0086-1.jpg','https://i.postimg.cc/R0r0qgcC/IMG-20250927-WA0085.jpg'], rating:4.9, reviews:31 },
-    { id:'wifi', name:'Getzner Wifi', price:13000, desc:'Tissu moderne, motifs originaux et belle souplesse.', category:'wifi',
+    { id:'wifi', name:'Getzner Wifi', price:13000, desc:'Le tissu Wifi séduit par ses motifs originaux et sa souplesse, idéal pour un usage quotidien ou événementiel.', category:'wifi',
       images:['https://i.postimg.cc/15rxDJhX/IMG-20250927-WA0094.jpg','https://i.postimg.cc/WbnKdzgd/IMG-20250927-WA0096-1.jpg','https://i.postimg.cc/02Wngw7Z/IMG-20250917-WA0031.jpg'], rating:4.6, reviews:18 },
-    { id:'focus', name:'Getzner Focus', price:14000, desc:'Texture soyeuse, tombé fluide — parfait pour tenues modernes.', category:'focus',
+    { id:'focus', name:'Getzner Focus', price:14000, desc:'Le Focus se distingue par sa texture soyeuse et son tombé fluide, parfait pour des tenues modernes et élégantes.', category:'focus',
       images:['https://i.postimg.cc/v8jTp8c6/IMG-20250927-WA0050.jpg','https://i.postimg.cc/bw0vDQLG/IMG-20250927-WA0054.jpg','https://i.postimg.cc/Dfts1PQB/IMG-20250927-WA0041.jpg'], rating:4.8, reviews:21 }
   ];
   write(KEY_PRODUCTS, PRODUCTS);
@@ -318,9 +362,12 @@ let USERS = read(KEY_USERS, []);
 let ORDERS = read(KEY_ORDERS, []);
 let NEWS = read(KEY_NEWS, []);
 
-function saveAll(){ write(KEY_PRODUCTS, PRODUCTS); write(KEY_CART, CART); write(KEY_USERS, USERS); write(KEY_ORDERS, ORDERS); write(KEY_NEWS, NEWS); }
+// save helper
+function persistAll(){ write(KEY_PRODUCTS, PRODUCTS); write(KEY_CART, CART); write(KEY_USERS, USERS); write(KEY_ORDERS, ORDERS); write(KEY_NEWS, NEWS); }
 
-/* ---------- render products ---------- */
+/* =========================
+   Render products
+   ========================= */
 function renderProducts(list = PRODUCTS){
   const grid = el('#productsGrid'); grid.innerHTML = '';
   list.forEach(p=>{
@@ -351,7 +398,7 @@ function renderProducts(list = PRODUCTS){
 }
 renderProducts();
 
-/* ---------- recommendations ---------- */
+/* Recommendations */
 function renderRecommendations(){
   const rec = el('#recommendGrid'); rec.innerHTML='';
   PRODUCTS.slice(0,4).forEach(p=>{
@@ -364,13 +411,13 @@ function renderRecommendations(){
 }
 renderRecommendations();
 
-/* ---------- search & filter ---------- */
+/* Search & filters */
 let CURRENT = PRODUCTS.slice();
 function applySearch(){ const q = el('#searchInput').value.trim().toLowerCase(); CURRENT = PRODUCTS.slice(); if(q) CURRENT = CURRENT.filter(p => (p.name + ' ' + p.desc).toLowerCase().includes(q)); applySort(); renderProducts(CURRENT); }
 function filterByCategory(cat){ if(cat==='all') CURRENT = PRODUCTS.slice(); else CURRENT = PRODUCTS.filter(p=>p.category===cat); elAll('.category-chip').forEach(ch => ch.style.background= ch.dataset.cat===cat ? 'rgba(230,191,82,0.12)':'transparent'); applySort(); renderProducts(CURRENT); }
 function applySort(){ const s = el('#sortSelect').value; if(s==='price-asc') CURRENT.sort((a,b)=>a.price-b.price); else if(s==='price-desc') CURRENT.sort((a,b)=>b.price-a.price); else if(s==='name-asc') CURRENT.sort((a,b)=>a.name.localeCompare(b.name)); else CURRENT.sort((a,b)=>b.rating-a.rating); renderProducts(CURRENT); }
 
-/* ---------- product modal & lightbox ---------- */
+/* Lightbox & buy modal */
 function openImageLightbox(src){ const back = document.createElement('div'); back.className='modal-back'; back.innerHTML = `<div class="modal" style="max-width:900px;flex-direction:column"><img src="${src}" style="max-width:100%;border-radius:8px"><div style="margin-top:8px;text-align:right"><button class="secondary-btn" onclick="this.closest('.modal-back').remove()">Fermer</button></div></div>`; document.getElementById('modals').appendChild(back); back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); }); }
 
 function openBuyModal(imgOrEl){
@@ -419,10 +466,9 @@ function openBuyModal(imgOrEl){
 }
 function openBuyModalFromCard(btn){ const card = btn.closest('.product'); card.querySelector('.main-photo').click(); }
 
-/* ---------- cart logic ---------- */
+/* Cart logic */
 function saveCart(){ write(KEY_CART, CART); }
 function addToCart(item){
-  // normalize
   item.qty = Number(item.qty) || 1;
   const same = CART.find(i=>i.id===item.id && i.img===item.img);
   if(same){ same.qty += item.qty; if(item.notes) same.notes=item.notes; } else CART.push(item);
@@ -438,7 +484,6 @@ function renderCart(){
     row.innerHTML = `<img src="${it.img}" alt="${it.name}"><div class="cart-mini-meta"><div style="font-weight:800">${it.name}</div><div class="small">${it.qty} m • ${money(it.price)} / m</div>${it.notes?`<div class="small">Remarque: ${escapeHtml(it.notes)}</div>`:''}${it.qty>=5?`<div style="color:green;font-weight:800" class="small">Remise 10% appliquée</div>`:''}</div><div style="text-align:right"><div style="font-weight:900">${money(line)}</div><div style="display:flex;gap:6px;margin-top:6px;justify-content:flex-end"><button class="secondary-btn" onclick="changeQty(${idx},1)">+</button><button class="secondary-btn" onclick="changeQty(${idx},-1)">−</button><button class="secondary-btn" onclick="removeItem(${idx})">Suppr</button></div></div>`;
     list.appendChild(row);
   });
-  // add shipping fee display
   const zone = el('#deliveryZone')?.value || 'dakar';
   const shipping = getShippingFee(zone);
   grand += shipping;
@@ -448,7 +493,6 @@ function renderCart(){
   totalEl.textContent = grand.toLocaleString() + ' CFA';
   el('#cartCount').textContent = CART.reduce((s,i)=>s+i.qty,0);
 }
-
 function changeQty(idx, delta){ if(!CART[idx]) return; CART[idx].qty = Math.max(0, CART[idx].qty + delta); if(CART[idx].qty === 0) CART.splice(idx,1); saveCart(); renderCart(); }
 function removeItem(idx){ CART.splice(idx,1); saveCart(); renderCart(); }
 function toggleCart(){ const panel = el('#cartPanel'); panel.classList.toggle('open'); }
@@ -457,16 +501,16 @@ function addFromCard(btn){ const card = btn.closest('.product'); const id = card
 function flashCart(){ el('#cartButton').animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:300}); }
 function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-/* ---------- shipping logic ---------- */
+/* Shipping */
 function getShippingFee(zone){
   if(zone === 'dakar') return 500;
   if(zone === 'pikine') return 800;
   if(zone === 'thies') return 1500;
   if(zone === 'retirer') return 0;
-  return 2000; // default for other regions
+  return 2000;
 }
 
-/* ---------- checkout flows (whatsapp + payments) ---------- */
+/* Checkout */
 function checkoutViaWhatsApp(){
   if(CART.length===0){ alert('Le panier est vide'); return; }
   const zone = el('#deliveryZone')?.value || 'dakar'; const shipping = getShippingFee(zone);
@@ -479,12 +523,12 @@ function checkoutViaWhatsApp(){
   const orderId = 'ORD' + Date.now();
   ORDERS.push({ id:orderId, items:CART, shippingZone:zone, shippingFee:shipping, total, status:'pending', createdAt:Date.now(), buyer:null });
   write(KEY_ORDERS, ORDERS);
-  // open whatsapp
   const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(decodeURIComponent(msg))}`;
-  window.open(url, '_blank');
+  window.open(url,'_blank');
   showToast('🔔 Commande prête — confirmez via WhatsApp');
 }
 
+/* Payments (Wave / Orange) */
 function openPayModal(method){
   if(CART.length===0){ alert('Le panier est vide'); return; }
   const total = CART.reduce((s,it)=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; return s + (base - disc); },0) + getShippingFee(el('#deliveryZone')?.value || 'dakar');
@@ -498,24 +542,21 @@ function openPayModal(method){
   back.querySelector('#payClose').addEventListener('click', ()=> back.remove());
   back.querySelector('#paidConfirm').addEventListener('click', ()=>{
     const ref = back.querySelector('#payRef').value.trim();
-    // record order as 'paid' with paymentRef
     const orderId = 'ORD' + Date.now();
     const shippingZone = el('#deliveryZone')?.value || 'dakar'; const shipping = getShippingFee(shippingZone);
     const order = { id: orderId, items: CART, shippingZone, shippingFee: shipping, total, status: 'paid', paymentMethod: label, paymentRef: ref, createdAt: Date.now() };
     ORDERS.push(order); write(KEY_ORDERS, ORDERS);
-    // open whatsapp prefilled confirmation message
     let msg = `Bonjour, j'ai effectué un paiement de ${total.toLocaleString()} CFA via ${label} (${number}).%0ARéférence: ${encodeURIComponent(ref)}%0ACommande:%0A`;
     order.items.forEach(it=>{ const base=it.price*it.qty; const disc=it.qty>=5?Math.round(base*0.10):0; const ln=base-disc; msg += `- ${it.qty} m de ${it.name} -> ${ln.toLocaleString()} CFA%0A`; });
     msg += `Frais livraison: ${shipping} CFA%0ATotal : ${total.toLocaleString()} CFA%0A%0ANom :%0ATéléphone :%0AAdresse :`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(decodeURIComponent(msg))}`, '_blank');
     showToast('✅ Paiement confirmé — commande enregistrée');
-    // clear cart
     CART = []; write(KEY_CART, CART); renderCart();
     back.remove();
   });
 }
 
-/* ---------- draggable cart button & panel ---------- */
+/* Draggable cart button & panel */
 (function draggable(){
   const btn = el('#cartButton'); const panel = el('#cartPanel'); const handle = el('#cartHandle');
   const savedBtn = JSON.parse(localStorage.getItem('cartBtnPos')||'null');
@@ -546,7 +587,7 @@ function openPayModal(method){
   handle.addEventListener('dblclick', ()=>{ localStorage.removeItem('cartPanelPos'); panel.style.left='auto'; panel.style.top='auto'; panel.style.right='18px'; panel.style.bottom='92px'; panel.style.position='fixed'; });
 })();
 
-/* ---------- Auth (client-side) ---------- */
+/* Auth (client-side) */
 function openAuthModal(){
   const back = document.createElement('div'); back.className='modal-back';
   back.innerHTML = `<div class="modal" role="dialog" aria-modal="true" style="max-width:720px"><div style="flex:1;padding-right:6px"><h3>Connexion / Inscription</h3><p class="small">Créez un compte client (stocké localement).</p><div style="display:flex;gap:8px;margin-top:8px"><button class="add-btn" id="switchLogin">Se connecter</button><button class="secondary-btn" id="switchRegister">S'inscrire</button></div><div id="authForm" style="margin-top:12px"></div></div><div style="width:260px;display:flex;flex-direction:column;gap:8px;align-items:center"><div style="width:100%;height:180px;background:linear-gradient(180deg,var(--gold-1),var(--gold-2));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#07100a;font-weight:800">SN-Élégance</div><button class="secondary-btn" id="closeAuth">Fermer</button></div></div>`;
@@ -579,20 +620,16 @@ function openAuthModal(){
   renderLogin();
   back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
 }
-
 function getCurrentUser(){ const id = localStorage.getItem('sn_logged_user'); if(!id) return null; return USERS.find(u=>u.id===id) || null; }
-
 function renderUserArea(){
   const user = getCurrentUser();
   if(!user) return;
-  // show simple user modal with order history
   const back = document.createElement('div'); back.className='modal-back';
   const userOrders = ORDERS.filter(o => o.buyer && o.buyer.id === user.id) || [];
   back.innerHTML = `<div class="modal" role="dialog" aria-modal="true" style="max-width:720px"><div style="flex:1;padding-right:6px"><h3>Mon compte — ${escapeHtml(user.name)}</h3><div class="small">Email: ${escapeHtml(user.email)} • Téléphone: ${escapeHtml(user.phone)}</div><div style="margin-top:12px"><strong>Historique des commandes</strong><div id="userOrdersArea" style="margin-top:8px"></div></div></div><div style="width:260px;display:flex;flex-direction:column;gap:8px;align-items:center"><button class="secondary-btn" id="logoutBtn">Se déconnecter</button><button class="secondary-btn" id="closeUser">Fermer</button></div></div>`;
   document.getElementById('modals').appendChild(back);
   back.querySelector('#logoutBtn').addEventListener('click', ()=>{ localStorage.removeItem('sn_logged_user'); showToast('✅ Déconnecté'); back.remove(); });
   back.querySelector('#closeUser').addEventListener('click', ()=> back.remove());
-  // fill orders
   const container = back.querySelector('#userOrdersArea');
   if(userOrders.length===0) container.innerHTML = '<div class="small">Aucune commande trouvée</div>';
   else {
@@ -605,13 +642,13 @@ function renderUserArea(){
   back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
 }
 
-/* ---------- Seller panel (admin local) ---------- */
+/* Seller panel */
 function openSellerPanel(){
-  const authed = localStorage.getItem(KEY_SELLER_AUTH) === 'true';
+  const authed = localStorage.getItem('sn_seller_auth') === 'true';
   if(!authed){
     const pass = prompt('Accès vendeur — mot de passe :');
     if(pass !== SELLER_PASS){ alert('Mot de passe incorrect'); return; }
-    localStorage.setItem(KEY_SELLER_AUTH, 'true');
+    localStorage.setItem('sn_seller_auth', 'true');
   }
   renderSellerPanel(); el('#sellerPanel').classList.add('open');
 }
@@ -630,7 +667,7 @@ function renderSellerPanel(){
   else {
     ORDERS.slice().reverse().forEach(o=>{
       const r = document.createElement('div'); r.style.border='1px solid rgba(255,255,255,0.03)'; r.style.padding='8px'; r.style.borderRadius='8px'; r.style.marginBottom='8px';
-      r.innerHTML = `<div style="display:flex;justify-content:space-between"><div style="font-weight:800">${o.id}</div><div class="small">${new Date(o.createdAt).toLocaleString()}</div></div><div class="small">Total: ${money(o.total)} • Statut: ${o.status}</div><div style="margin-top:6px;display:flex;gap:6px"><button class="btn-ghost" onclick="markAs(${o.id},'preparation')">En préparation</button><button class="btn-ghost" onclick="markAs('${o.id}','delivered')">Livré</button></div>`;
+      r.innerHTML = `<div style="display:flex;justify-content:space-between"><div style="font-weight:800">${o.id}</div><div class="small">${new Date(o.createdAt).toLocaleString()}</div></div><div class="small">Total: ${money(o.total)} • Statut: ${o.status}</div><div style="margin-top:6px;display:flex;gap:6px"><button class="btn-ghost" onclick="markAs('${o.id}','preparation')">En préparation</button><button class="btn-ghost" onclick="markAs('${o.id}','delivered')">Livré</button></div>`;
       ordList.appendChild(r);
     });
   }
@@ -668,7 +705,7 @@ function newProductFlow(){
   back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
 }
 
-/* export/import */
+/* Export/Import */
 function exportProducts(){ const data = JSON.stringify(PRODUCTS, null, 2); const blob = new Blob([data], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='sn_products_export.json'; a.click(); URL.revokeObjectURL(url); }
 function exportOrdersCSV(){
   if(ORDERS.length===0){ alert('Aucune commande à exporter'); return; }
@@ -678,33 +715,85 @@ function exportOrdersCSV(){
   const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='sn_orders_export.csv'; a.click(); URL.revokeObjectURL(url);
 }
 
-/* ---------- chatbot (simple) ---------- */
-function openChat(){
-  const back = document.createElement('div'); back.className='modal-back';
-  back.innerHTML = `<div class="modal" style="max-width:520px;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:center"><h3>Assistant SN-Élégance</h3><button class="secondary-btn" id="closeChat">Fermer</button></div><div id="chatArea" style="height:320px;overflow:auto;border:1px solid #eee;padding:8px;border-radius:8px;background:#fafafa;margin-top:8px"></div><div style="display:flex;gap:8px;margin-top:8px"><input id="chatInput" placeholder="Ex: Je veux 5m de Magnum" style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd"><button class="add-btn" id="sendChat">Envoyer</button></div></div>`;
-  document.getElementById('modals').appendChild(back);
-  back.querySelector('#closeChat').addEventListener('click', ()=> back.remove());
-  const chatArea = back.querySelector('#chatArea'); const input = back.querySelector('#chatInput');
-  function botReply(q){
-    q = q.toLowerCase();
-    if(q.includes('magnum')) return 'Le Magnum est à 11 000 CFA / m. Souhaitez-vous ajouter au panier ?';
-    if(q.includes('brocade')) return 'Le Brocade est à 13 000 CFA / m — motifs très raffinés.';
-    if(q.includes('wifi')) return 'Wifi: 13 000 CFA / m, léger et moderne.';
-    if(q.includes('focus')) return 'Focus: 14 000 CFA / m, pour tenues sobres et élégantes.';
-    if(q.includes('livraison')) return 'Nous livrons à Dakar, Pikine, Thiès. Frais variables — choisis la zone lors du checkout.';
-    if(q.includes('paiement')) return 'Wave & Orange Money acceptés. Paiement via QR dans le panier.';
-    return 'Bonjour 👋 — je peux vous aider à choisir un tissu ou préparer une commande. Tapez le nom du tissu ou "commande".';
+/* Chatbot (connected to server) */
+/*
+  IMPORTANT:
+  - Le serveur doit exposer POST /api/chat qui accepte:
+    { messages: [{role:'user'|'system', content: '...'}, ...], systemPrompt?: '...' }
+  - Le serveur appelle OpenAI en toute sécurité (clé côté serveur).
+  - CHANGE CHAT_API_ENDPOINT au besoin.
+*/
+const CHAT_SYSTEM_PROMPT = `You are SN-Élégance assistant. Provide help in French or English depending on the user's language preference. Know products:
+- Getzner Magnum Gold: 11000 CFA/m
+- Getzner Wifi: 13000 CFA/m
+- Getzner Brocade: 13000 CFA/m
+- Getzner Focus: 14000 CFA/m
+
+If user gives quantity, calculate total price (qty * price). Apply 10% discount if quantity >= 5 meters. Offer delivery fee options (Dakar 500, Pikine 800, Thiès 1500). Provide payment instructions for Wave (+221754437491) and Orange (+221784324745). Keep responses concise, polite, and professional.`;
+
+async function callChatServer(messages){
+  try{
+    const res = await fetch(CHAT_API_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ messages, systemPrompt: CHAT_SYSTEM_PROMPT, model: 'gpt-5-mini', max_tokens: 800 })
+    });
+    if(!res.ok){
+      console.error('Chat server error', res.status);
+      const t = await res.text();
+      console.error(t);
+      return `Désolé, le service de chat est indisponible (code ${res.status}).`;
+    }
+    const data = await res.json();
+    return data.reply || (data.raw?.choices?.[0]?.message?.content) || 'Désolé, pas de réponse.';
+  } catch(err){
+    console.error('chat call error', err);
+    return 'Désolé, impossible de contacter le serveur de chat.';
   }
-  back.querySelector('#sendChat').addEventListener('click', ()=>{
-    const q = input.value.trim(); if(!q) return;
-    const userDiv = document.createElement('div'); userDiv.style.textAlign='right'; userDiv.innerHTML = `<div style="display:inline-block;background:#07100a;color:#fff;padding:6px 8px;border-radius:8px;margin-bottom:6px">${escapeHtml(q)}</div>`; chatArea.appendChild(userDiv);
-    input.value=''; chatArea.scrollTop = chatArea.scrollHeight;
-    setTimeout(()=>{ const r = botReply(q); const botDiv = document.createElement('div'); botDiv.innerHTML = `<div style="display:inline-block;background:#fff;padding:6px 8px;border-radius:8px;margin-bottom:6px">${escapeHtml(r)}</div>`; chatArea.appendChild(botDiv); chatArea.scrollTop = chatArea.scrollHeight; }, 400);
-  });
-  back.addEventListener('click',(e)=>{ if(e.target===back) back.remove(); });
 }
 
-/* ---------- newsletter ---------- */
+/* Chat UI handling */
+let chatHistory = []; // local session (user + assistant messages)
+function addChatBubble(who, text){
+  const body = el('#chatBody');
+  const node = document.createElement('div');
+  node.className = who === 'user' ? 'msg-user' : 'msg-bot';
+  node.textContent = text;
+  body.appendChild(node);
+  body.scrollTop = body.scrollHeight;
+}
+async function handleSendChat(){
+  const input = el('#chatInputText'); const text = input.value.trim(); if(!text) return;
+  input.value = '';
+  addChatBubble('user', text);
+  // push to history
+  chatHistory.push({ role: 'user', content: text });
+  // language preference
+  const lang = el('#chatLang').value; // 'auto'|'fr'|'en'
+  const systemLangHint = lang === 'fr' ? 'Please respond in French.' : (lang === 'en' ? 'Please respond in English.' : '');
+  const messages = [{ role: 'system', content: CHAT_SYSTEM_PROMPT + (systemLangHint ? ' ' + systemLangHint : '') }, ...chatHistory];
+  addChatBubble('bot', '⏳ Réponse en cours...');
+  const reply = await callChatServer(messages);
+  // remove the temporary 'loading' bubble (last bot one)
+  const body = el('#chatBody');
+  const last = body.querySelector('.msg-bot:last-child');
+  if(last && last.textContent === '⏳ Réponse en cours...') last.remove();
+  addChatBubble('bot', reply);
+  // add assistant to history
+  chatHistory.push({ role: 'assistant', content: reply });
+}
+
+/* Chat toggle */
+el('#toggleChatBtn').addEventListener('click', ()=> {
+  el('#chatWindow').classList.toggle('open');
+  // focus input when opening
+  setTimeout(()=> el('#chatInputText').focus(), 200);
+});
+el('#closeChatBtn').addEventListener('click', ()=> el('#chatWindow').classList.remove('open'));
+el('#sendChatBtn').addEventListener('click', handleSendChat);
+el('#chatInputText').addEventListener('keydown', (e)=>{ if(e.key==='Enter') handleSendChat(); });
+
+/* Newsletter */
 function subscribeNewsletter(){
   const email = el('#newsletterEmail').value.trim();
   if(!email || !email.includes('@')){ alert('Entrer un email valide'); return; }
@@ -712,13 +801,8 @@ function subscribeNewsletter(){
   NEWS.push(email); write(KEY_NEWS, NEWS); showToast('✅ Inscription confirmée');
 }
 
-/* ---------- util & init ---------- */
-function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-/* UI bindings */
-el('#openAuthBtn').addEventListener('click', ()=> {
-  const u = getCurrentUser(); if(u) renderUserArea(); else openAuthModal();
-});
+/* UI bindings & init */
+el('#openAuthBtn').addEventListener('click', ()=> { const u = getCurrentUser(); if(u) renderUserArea(); else openAuthModal(); });
 el('#openSellerBtn').addEventListener('click', openSellerPanel);
 el('#closeSellerBtn').addEventListener('click', closeSellerPanel);
 el('#newProductBtn').addEventListener('click', newProductFlow);
@@ -727,30 +811,28 @@ el('#exportOrdersBtn').addEventListener('click', exportOrdersCSV);
 el('#importBtn').addEventListener('click', ()=> el('#importFile').click());
 el('#importFile').addEventListener('change', (e)=> { const f = e.target.files[0]; if(!f) return; const reader = new FileReader(); reader.onload = (ev)=>{ try{ const arr = JSON.parse(ev.target.result); if(!Array.isArray(arr)){ alert('Fichier invalide'); return; } PRODUCTS = arr; write(KEY_PRODUCTS, PRODUCTS); renderProducts(PRODUCTS); renderRecommendations(); renderSellerPanel(); showToast('✅ Import terminé'); } catch(err){ alert('Erreur import : ' + err.message); } }; reader.readAsText(f); e.target.value=''; });
 
-el('#openChatBtn').addEventListener('click', openChat);
-el('#cartButton').addEventListener('click', toggleCart);
-
-// cookie banner
 if(localStorage.getItem('cookiesAccepted') === 'true'){ document.getElementById('cookie-banner').style.display='none'; }
 el('#accept-cookies').addEventListener('click', ()=>{ localStorage.setItem('cookiesAccepted','true'); document.getElementById('cookie-banner').style.display='none'; });
 
-// search enter
 el('#searchInput').addEventListener('keydown', (e)=>{ if(e.key==='Enter') applySearch(); });
-
-// delivery change -> rerender cart
 el('#deliveryZone').addEventListener('change', ()=> renderCart());
+el('#closeSellerBtn').addEventListener('click', ()=> closeSellerPanel());
 
 // initial render
 renderProducts(PRODUCTS); renderRecommendations(); renderCart();
 
-/* =========================
-   Small note: helpful dev functions in console:
+/* Helpful dev notes in console:
    - localStorage.clear() // reset everything (careful)
    - write(KEY_PRODUCTS, newArray)
-   ========================= */
+   - To change chat endpoint: modify CHAT_API_ENDPOINT constant at top.
+*/
+
+/* preserve state */
+window.addEventListener('beforeunload', ()=> persistAll());
 
 </script>
 </body>
 </html>
+
 
 
